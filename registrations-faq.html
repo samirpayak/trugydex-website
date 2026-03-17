@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Registrations FAQs | Trugydex Solutions</title>
+<meta name="description" content="Complete guide to business registrations in India – PAN, GST, MSME, Startup India, Shop & Establishment License, and more.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --blue: #003087;
+    --blue-dark: #001f5b;
+    --blue-light: #e8eef8;
+    --green: #2E7D32;
+    --green-light: #e8f5e9;
+    --white: #ffffff;
+    --gray: #f5f6fa;
+    --text: #1a1a2e;
+    --muted: #5a6072;
+    --border: #dde3f0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(0,48,135,0.07);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { height: 48px; width: auto; object-fit: contain; }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--blue); line-height: 1; }
+  .logo-name span { color: var(--green); }
+  .logo-tagline { font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta {
+    background: var(--blue); color: var(--white); padding: 10px 22px;
+    border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--blue-dark); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    margin-top: 70px;
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, #1a4f8a 100%);
+    color: var(--white);
+    padding: 80px 5% 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    background: rgba(46,125,50,0.12);
+    border-radius: 50%;
+  }
+  .page-header-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(46,125,50,0.2); border: 1px solid rgba(46,125,50,0.4);
+    color: #81c784; padding: 6px 14px; border-radius: 20px;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .page-header p {
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    max-width: 1200px; margin: 0 auto;
+    padding: 20px 5%;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--blue); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  /* ── REGISTRATION CATEGORIES ── */
+  .categories-section {
+    max-width: 1200px; margin: 60px auto 80px;
+    padding: 0 5%;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  .section-header p {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+  .category-card {
+    background: var(--gray);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .category-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, var(--blue-light) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+  }
+  .category-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,48,135,0.12);
+  }
+  .category-card:hover::before { opacity: 1; }
+  .category-icon {
+    font-size: 40px;
+    color: var(--blue);
+    margin-bottom: 16px;
+    display: inline-block;
+    transition: transform .3s;
+  }
+  .category-card:hover .category-icon {
+    transform: scale(1.15) rotateY(10deg);
+  }
+  .category-card h3 {
+    font-size: 18px;
+    color: var(--blue);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .category-card p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ── CHECKLIST SECTION ── */
+  .checklist-section {
+    background: var(--blue-light);
+    padding: 60px 5%;
+    margin-bottom: 80px;
+    border-radius: 12px;
+  }
+  .checklist-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .checklist-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+  .checklist-group h3 {
+    color: var(--green);
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .checklist-group h3::before {
+    content: '✓';
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 24px; height: 24px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .checklist-item {
+    display: flex; gap: 10px;
+    margin-bottom: 12px;
+    color: var(--text);
+    font-size: 14px;
+  }
+  .checklist-item::before {
+    content: '→';
+    color: var(--green);
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  /* ── FAQ ACCORDION ── */
+  .faq-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 5%;
+    margin-bottom: 100px;
+  }
+  .faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .faq-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  .faq-header p {
+    color: var(--muted);
+    font-size: 16px;
+  }
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: var(--white);
+    transition: all .3s;
+  }
+  .faq-item:hover {
+    border-color: var(--blue);
+    box-shadow: 0 4px 16px rgba(0,48,135,0.08);
+  }
+  .faq-question {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text);
+    font-weight: 500;
+    transition: color .2s;
+  }
+  .faq-item.active .faq-question {
+    color: var(--blue);
+    background: var(--blue-light);
+  }
+  .faq-toggle {
+    font-size: 20px;
+    color: var(--blue);
+    transition: transform .3s;
+    display: inline-flex;
+  }
+  .faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s, padding .3s;
+    background: transparent;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 800px;
+    padding: 0 24px 20px;
+  }
+  .faq-answer p {
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+  .faq-answer ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .faq-answer li {
+    color: var(--text);
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  .faq-answer strong {
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  /* ── SEQUENCE SECTION ── */
+  .sequence-section {
+    background: var(--gray);
+    padding: 60px 5%;
+    margin: 80px 0;
+    border-radius: 12px;
+  }
+  .sequence-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sequence-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .sequence-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    position: relative;
+  }
+  .sequence-step {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    transition: all .3s;
+  }
+  .sequence-step:hover {
+    border-color: var(--green);
+    box-shadow: 0 8px 24px rgba(46,125,50,0.1);
+  }
+  .sequence-number {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .sequence-step h3 {
+    color: var(--blue);
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .sequence-step p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, #1a4f8a 100%);
+    color: var(--white);
+    padding: 60px 5%;
+    margin-bottom: 80px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 300px; height: 300px;
+    background: rgba(46,125,50,0.15);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  .cta-section p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    opacity: 0.95;
+  }
+  .btn-cta {
+    background: var(--green);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: all .2s;
+  }
+  .btn-cta:hover {
+    background: #1b5e20;
+    transform: translateY(-2px);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text);
+    color: var(--white);
+    padding: 50px 5% 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  footer p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 4%; }
+    .nav-links { gap: 16px; font-size: 12px; }
+    .page-header { padding: 60px 4% 40px; }
+    .page-header h1 { font-size: 1.8rem; }
+    .section-header h2, .faq-header h2, .checklist-section h2, .sequence-section h2, .cta-section h2 { font-size: 1.6rem; }
+    .categories-grid { grid-template-columns: 1fr; gap: 16px; }
+    .faq-question { padding: 16px 16px; }
+    .faq-item.active .faq-answer { padding: 0 16px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="TG_LOGOO.png" alt="Trugydex Logo">
+    <div class="logo-text">
+      <div class="logo-name">TRUGY<span>DEX</span></div>
+      <div class="logo-tagline">Sahi Salah Suchan</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="#faq">FAQs</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-badge">
+    <span></span>
+    Startup & Business Registration Guide
+  </div>
+  <h1>Business Registrations in India</h1>
+  <p>Complete guidance on PAN, GST, MSME, Startup India, and all essential registrations to launch your business legally.</p>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> / <a href="#services">Services</a> / Business Registrations FAQs
+</div>
+
+<!-- REGISTRATION CATEGORIES -->
+<section class="categories-section">
+  <div class="section-header">
+    <h2>Key Registration Categories</h2>
+    <p>Understand the essential registrations required for your business</p>
+  </div>
+  
+  <div class="categories-grid">
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-building"></i></div>
+      <h3>Business Registration</h3>
+      <p>Private Limited, LLP, Partnership, or Sole Proprietorship structures</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-credit-card"></i></div>
+      <h3>PAN & TAN</h3>
+      <p>Permanent Account Number for taxation and GST purposes</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-receipt"></i></div>
+      <h3>GST Registration</h3>
+      <p>Goods & Services Tax for eligible businesses</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-rocket"></i></div>
+      <h3>MSME (Udyam)</h3>
+      <p>Access government schemes, subsidies & financing benefits</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-star"></i></div>
+      <h3>Startup India</h3>
+      <p>Tax exemptions, easier compliance & government funding</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-store"></i></div>
+      <h3>Shop & Establishment</h3>
+      <p>License from state authority for business premises</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-globe"></i></div>
+      <h3>Import-Export Code</h3>
+      <p>Required for international trade activities</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-university"></i></div>
+      <h3>Labour Compliance</h3>
+      <p>PF, ESIC, and Professional Tax registrations</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-trademark"></i></div>
+      <h3>Trademark & IP</h3>
+      <p>Protect your brand name, logo, and business identity</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLETE REGISTRATION CHECKLIST -->
+<section class="checklist-section">
+  <div class="checklist-inner">
+    <h2>Complete Registration Checklist</h2>
+    
+    <div class="checklist-grid">
+      <div class="checklist-group">
+        <h3>Core Registrations</h3>
+        <div class="checklist-item">Business Registration</div>
+        <div class="checklist-item">PAN & TAN</div>
+        <div class="checklist-item">Bank Account</div>
+        <div class="checklist-item">GST Registration</div>
+      </div>
+      
+      <div class="checklist-group">
+        <h3>Growth & Benefits</h3>
+        <div class="checklist-item">MSME (Udyam)</div>
+        <div class="checklist-item">Startup India (DPIIT)</div>
+        <div class="checklist-item">Trademark Registration</div>
+        <div class="checklist-item">Shop & Establishment</div>
+      </div>
+      
+      <div class="checklist-group">
+        <h3>Industry-Specific</h3>
+        <div class="checklist-item">Import-Export Code</div>
+        <div class="checklist-item">FSSAI (Food Business)</div>
+        <div class="checklist-item">Labour Registrations</div>
+        <div class="checklist-item">Environmental Compliance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IDEAL SEQUENCE -->
+<section class="sequence-section">
+  <div class="sequence-inner">
+    <h2>Recommended Registration Sequence</h2>
+    
+    <div class="sequence-timeline">
+      <div class="sequence-step">
+        <div class="sequence-number">1</div>
+        <h3>Business Registration</h3>
+        <p>Choose structure & register your business</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">2</div>
+        <h3>PAN & Bank Account</h3>
+        <p>Get PAN & open business account</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">3</div>
+        <h3>GST Registration</h3>
+        <p>If applicable based on turnover</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">4</div>
+        <h3>MSME Registration</h3>
+        <p>Access government benefits & schemes</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">5</div>
+        <h3>Startup India</h3>
+        <p>If eligible for startup benefits</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">6</div>
+        <h3>Trademark & IP</h3>
+        <p>Protect your brand identity</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section" id="faq">
+  <div class="faq-header">
+    <h2>Frequently Asked Questions</h2>
+    <p>Get answers to common questions about business registrations</p>
+  </div>
+
+  <div class="faq-item active">
+    <button class="faq-question">
+      <span>What is the first step to start a business in India?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>The first step is to legally register your business by selecting an appropriate structure such as a <strong>Private Limited Company, LLP, Partnership Firm, or Sole Proprietorship</strong>. This establishes your business as a legal entity recognized by the government.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is PAN mandatory for starting a business?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, Permanent Account Number (PAN) is mandatory.</strong> Companies and LLPs require a separate PAN from the company's Registrar. Proprietorships and partnerships can operate using the owner's personal PAN.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is GST registration compulsory for all businesses?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>GST registration is <strong>required if your business exceeds the prescribed turnover limits</strong>, engages in interstate trade, or operates through e-commerce platforms. It is also advisable for businesses dealing with other registered entities to maintain compliance and claim input tax credits.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is MSME (Udyam) registration and is it necessary?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>MSME registration is <strong>not mandatory but is highly beneficial.</strong> It provides access to government schemes, easier financing options, subsidies, protection against delayed payments, and various other benefits. Udyam registration is now simplified and can be done online.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is Startup India (DPIIT) registration?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Startup India registration is designed for <strong>innovative businesses</strong> and provides benefits such as:
+      <ul>
+        <li>Income tax exemptions for 3 years</li>
+        <li>Easier compliance requirements</li>
+        <li>Access to government funding schemes</li>
+        <li>Mentorship and networking opportunities</li>
+      </ul>
+      Registration is subject to eligibility criteria set by the Department for Promotion of Industry and Internal Trade (DPIIT).</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is a Shop and Establishment License required?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, most businesses are required to obtain a Shop and Establishment License</strong> from the respective state authority, especially if operating from a commercial premises. This includes offices, retail shops, warehouses, and other business locations.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is an Import Export Code (IEC)?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Import Export Code (IEC) is required for businesses involved in import or export</strong> of goods or services. Without this registration from the Directorate General of Foreign Trade (DGFT), international trade cannot be conducted. It's a unique 10-digit code.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is a business bank account necessary?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, a current account in the business name is essential</strong> for carrying out financial transactions and maintaining proper financial records. This keeps personal and business finances separate, which is crucial for:
+      <ul>
+        <li>Financial transparency</li>
+        <li>Tax compliance</li>
+        <li>Loan and credit applications</li>
+        <li>Legal compliance</li>
+      </ul></p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Are labour law registrations required?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Labour law registrations such as <strong>Provident Fund (PF), ESIC, and Professional Tax</strong> are applicable once a business employs staff, subject to prescribed thresholds. These registrations are mandatory to comply with labour laws and protect employee benefits.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is trademark registration compulsory?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Trademark registration is <strong>not mandatory but strongly recommended</strong> to protect your:
+      <ul>
+        <li>Brand name</li>
+        <li>Logo and design</li>
+        <li>Business identity</li>
+        <li>Competitive advantage</li>
+      </ul>
+      Registration provides legal protection against misuse by competitors.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Are there any industry-specific licenses required?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, certain industries require additional licenses or approvals:</strong>
+      <ul>
+        <li>Food businesses require FSSAI registration</li>
+        <li>Financial services may require RBI approvals</li>
+        <li>Healthcare businesses need specific medical board approvals</li>
+        <li>Manufacturing may need pollution control certificates</li>
+        <li>Insurance businesses need IRDAI registration</li>
+      </ul>
+      Consult industry-specific regulators for your business type.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What registrations are required for online businesses?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Online businesses require <strong>similar registrations as offline businesses</strong>, including:
+      <ul>
+        <li>Business Registration</li>
+        <li>PAN</li>
+        <li>GST (in most cases)</li>
+        <li>Bank Account</li>
+        <li>MSME (if eligible)</li>
+      </ul>
+      Additionally, ensure compliance with website policies, payment gateway terms, and consumer protection regulations.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is the minimum registration required to start a business?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>At a basic level, a business should have:</p>
+      <ul>
+        <li><strong>Business Registration</strong> (Private Ltd, LLP, Partnership, or Proprietorship)</li>
+        <li><strong>PAN</strong> (Company PAN or owner's PAN)</li>
+        <li><strong>Bank Account</strong> (Current account in business name)</li>
+        <li><strong>GST</strong> (if applicable based on turnover)</li>
+        <li><strong>MSME Registration</strong> (recommended for benefits)</li>
+      </ul>
+      These form the foundation for legal and financial compliance.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is the complete registration checklist for a business?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>A comprehensive registration framework includes:</p>
+      <ul>
+        <li>Business Registration (Company/LLP/Partnership/Proprietorship)</li>
+        <li>PAN & TAN (Permanent & Tax Deduction Account Numbers)</li>
+        <li>GST Registration (if applicable)</li>
+        <li>MSME (Udyam) Registration</li>
+        <li>Startup India (DPIIT) Registration</li>
+        <li>Shop & Establishment License</li>
+        <li>Trademark Registration</li>
+        <li>Labour Law Registrations (PF, ESIC, PT)</li>
+        <li>Import Export Code (if applicable)</li>
+        <li>Industry-specific licenses (FSSAI, etc.)</li>
+      </ul></p>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Need Professional Guidance?</h2>
+    <p>Our compliance experts at Trugydex Solutions can guide you through every registration step and ensure your business is fully compliant with all regulatory requirements.</p>
+    <a href="index.html#contact" class="btn-cta">Get Expert Consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2024 Trugydex Solutions Private Limited. All rights reserved.</p>
+  <p>Sahi Salah Suchan — Compliance & Regulatory Expertise</p>
+</footer>
+
+<!-- JAVASCRIPT FOR ACCORDION -->
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', function() {
+      const faqItem = this.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all open items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Open clicked item if it wasn't active
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
