@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trugydex.in/sitemap.xml
+
+# Allow all crawlers to index everything
+Disallow:
+
+# Specific crawlers are welcome
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional - tells crawlers to be nice)
+Crawl-delay: 1
