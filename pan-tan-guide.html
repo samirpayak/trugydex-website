@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAN & TAN Registration Guide | Trugydex Solutions</title>
+<meta name="description" content="Complete guide to PAN and TAN registration in India. Learn about application process, documents required, timelines, and compliance requirements.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --blue: #003087;
+    --blue-dark: #001f5b;
+    --blue-light: #e8eef8;
+    --green: #2E7D32;
+    --green-light: #e8f5e9;
+    --white: #ffffff;
+    --gray: #f5f6fa;
+    --text: #1a1a2e;
+    --muted: #5a6072;
+    --border: #dde3f0;
+    --orange: #ff9800;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(0,48,135,0.07);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { height: 48px; width: auto; object-fit: contain; }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--blue); line-height: 1; }
+  .logo-name span { color: var(--green); }
+  .logo-tagline { font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta {
+    background: var(--blue); color: var(--white); padding: 10px 22px;
+    border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--blue-dark); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    margin-top: 70px;
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, #1a4f8a 100%);
+    color: var(--white);
+    padding: 80px 5% 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    background: rgba(46,125,50,0.12);
+    border-radius: 50%;
+  }
+  .page-header-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(46,125,50,0.2); border: 1px solid rgba(46,125,50,0.4);
+    color: #81c784; padding: 6px 14px; border-radius: 20px;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .page-header p {
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    max-width: 1200px; margin: 0 auto;
+    padding: 20px 5%;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--blue); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  /* ── TABLE OF CONTENTS ── */
+  .toc-section {
+    max-width: 1200px; margin: 60px auto;
+    padding: 0 5%;
+  }
+  .toc-box {
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    border-radius: 8px;
+    padding: 30px;
+  }
+  .toc-box h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--blue);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+  .toc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    list-style: none;
+  }
+  .toc-list li {
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .toc-list li::before {
+    content: '▸';
+    color: var(--green);
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  .toc-list a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s;
+  }
+  .toc-list a:hover { color: var(--green); }
+
+  /* ── MAIN CONTENT ── */
+  .content-section {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 5%;
+  }
+  .section-divider {
+    margin: 80px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── QA SECTION ── */
+  .qa-item {
+    margin-bottom: 50px;
+  }
+  .qa-number {
+    display: inline-block;
+    background: var(--blue);
+    color: var(--white);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .qa-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--blue);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .qa-content {
+    color: var(--text);
+    line-height: 1.8;
+  }
+  .qa-content p {
+    margin-bottom: 14px;
+  }
+  .qa-content ul, .qa-content ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+  }
+  .qa-content li {
+    margin-bottom: 10px;
+  }
+  .qa-content strong {
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: #fff3cd;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 24px 0;
+  }
+  .highlight-box i {
+    color: var(--orange);
+    margin-right: 10px;
+  }
+  .highlight-box p {
+    margin-bottom: 8px;
+  }
+  .highlight-box li {
+    margin-bottom: 8px;
+  }
+
+  /* ── SUCCESS BOX ── */
+  .success-box {
+    background: #d4edda;
+    border-left: 4px solid var(--green);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 24px 0;
+  }
+  .success-box i {
+    color: var(--green);
+    margin-right: 10px;
+  }
+  .success-box p {
+    margin-bottom: 8px;
+  }
+
+  /* ── TABLE ── */
+  .table-responsive {
+    overflow-x: auto;
+    margin: 24px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--blue);
+    color: var(--white);
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  tr:hover {
+    background: var(--gray);
+  }
+
+  /* ── STEP CARD ── */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 24px 0;
+  }
+  .step-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all .3s;
+  }
+  .step-card:hover {
+    border-color: var(--green);
+    box-shadow: 0 8px 24px rgba(46,125,50,0.1);
+  }
+  .step-number {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .step-card h3 {
+    color: var(--blue);
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .step-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .step-card ul {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .step-card li {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+  }
+  .checklist h3 {
+    color: var(--green);
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .checklist-item {
+    display: flex; gap: 12px;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 14px;
+  }
+  .checklist-item::before {
+    content: '✓';
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 24px; height: 24px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  /* ── DOWNLOAD SECTION ── */
+  .download-section {
+    background: var(--gray);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 24px 0;
+  }
+  .download-section h3 {
+    color: var(--blue);
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .download-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex; gap: 12px;
+    align-items: flex-start;
+    transition: all .3s;
+  }
+  .download-item:hover {
+    border-color: var(--blue);
+    box-shadow: 0 4px 12px rgba(0,48,135,0.1);
+  }
+  .download-icon {
+    width: 40px; height: 40px;
+    background: var(--blue-light);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue);
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .download-info h4 {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .download-info p {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, #1a4f8a 100%);
+    color: var(--white);
+    padding: 60px 5%;
+    margin: 80px 0;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 300px; height: 300px;
+    background: rgba(46,125,50,0.15);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  .cta-section p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    opacity: 0.95;
+  }
+  .btn-cta {
+    background: var(--green);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: all .2s;
+  }
+  .btn-cta:hover {
+    background: #1b5e20;
+    transform: translateY(-2px);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text);
+    color: var(--white);
+    padding: 50px 5% 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  footer p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 4%; }
+    .nav-links { gap: 16px; font-size: 12px; }
+    .page-header { padding: 60px 4% 40px; }
+    .page-header h1 { font-size: 1.8rem; }
+    .qa-question { font-size: 1.2rem; }
+    .toc-list { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .download-grid { grid-template-columns: 1fr; }
+    .table-responsive { overflow-x: auto; }
+    table { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="TG_LOGOO.png" alt="Trugydex Logo">
+    <div class="logo-text">
+      <div class="logo-name">TRUGY<span>DEX</span></div>
+      <div class="logo-tagline">Sahi Salah Suchan</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="registrations-faq.html">Registrations</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-badge">
+    <span></span>
+    Step-by-Step Registration Guide
+  </div>
+  <h1>PAN & TAN Registration – Complete Guide</h1>
+  <p>Learn everything about Permanent Account Number (PAN) and Tax Deduction Account Number (TAN) registration in India. Detailed process, documents, timelines, and compliance requirements.</p>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> / <a href="registrations-faq.html">Registrations</a> / PAN & TAN Guide
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc-section">
+  <div class="toc-box">
+    <h2><i class="fas fa-list"></i> Quick Navigation</h2>
+    <ul class="toc-list">
+      <li><a href="#q1">What is PAN and TAN?</a></li>
+      <li><a href="#q2">Is PAN & TAN mandatory?</a></li>
+      <li><a href="#q3">How to apply?</a></li>
+      <li><a href="#q4">PAN Registration Process</a></li>
+      <li><a href="#q5">TAN Registration Process</a></li>
+      <li><a href="#q6">Auto-allotment via Company</a></li>
+      <li><a href="#q7">Documents Checklist</a></li>
+      <li><a href="#q8">Compliance Checklist</a></li>
+      <li><a href="#q9">Timeline & Validity</a></li>
+      <li><a href="#q10">Penalties & Non-Compliance</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTENT SECTION -->
+<section class="content-section">
+
+  <!-- Q1 -->
+  <div class="qa-item" id="q1">
+    <div class="qa-number">1</div>
+    <h2 class="qa-question">What is PAN and TAN?</h2>
+    <div class="qa-content">
+      <h3 style="color: var(--green); margin-bottom: 12px; font-size: 1.1rem;">✅ PAN (Permanent Account Number)</h3>
+      <p><strong>PAN is a 10-digit alphanumeric number</strong> issued by the <strong>Income Tax Department</strong> to identify and track taxpayers in India.</p>
+      <p><strong>👉 PAN is mandatory for:</strong></p>
+      <ul>
+        <li><strong>Filing Income Tax Returns (ITR)</strong> – Mandatory for all taxable individuals and entities</li>
+        <li><strong>Opening Bank Accounts</strong> – Required by all banks and financial institutions</li>
+        <li><strong>GST Registration</strong> – PAN is linked to GST registration</li>
+        <li><strong>Financial Transactions</strong> – Large transactions require PAN</li>
+        <li><strong>Stock Market Trading</strong> – Required by NSE, BSE for trading accounts</li>
+        <li><strong>Mutual Fund Investments</strong> – Needed for investment accounts</li>
+        <li><strong>Property Transactions</strong> – Required for buying/selling immovable property</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin-bottom: 12px; font-size: 1.1rem; margin-top: 24px;">✅ TAN (Tax Deduction and Collection Account Number)</h3>
+      <p><strong>TAN is also a 10-digit alphanumeric number</strong> required by the <strong>Income Tax Department</strong> from entities that deduct or collect taxes.</p>
+      <p><strong>👉 TAN is required for businesses/entities that:</strong></p>
+      <ul>
+        <li><strong>Deduct TDS (Tax Deducted at Source)</strong> – Salary, interest, rent, professional fees, etc.</li>
+        <li><strong>Collect TCS (Tax Collected at Source)</strong> – From customers in certain transactions</li>
+        <li><strong>Make payments subject to TDS</strong> – To contractors, consultants, vendors</li>
+      </ul>
+
+      <div class="highlight-box">
+        <i class="fas fa-exclamation-circle"></i>
+        <p><strong>❗ Important:</strong> Without TAN, you cannot file TDS returns, and penalties may apply. Every employer and business making taxable payments must obtain TAN.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q2 -->
+  <div class="qa-item" id="q2">
+    <div class="qa-number">2</div>
+    <h2 class="qa-question">Is PAN & TAN Mandatory for All Entities?</h2>
+    <div class="qa-content">
+      <p>The requirement varies by entity type. Here's a comprehensive breakdown:</p>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Entity Type</th>
+              <th>PAN Required?</th>
+              <th>TAN Required?</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Private Limited Company</strong></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory</span></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory (if TDS applicable)</span></td>
+              <td>Auto-allotted via SPICe+ during incorporation</td>
+            </tr>
+            <tr>
+              <td><strong>LLP (Limited Liability Partnership)</strong></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory</span></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory (if TDS applicable)</span></td>
+              <td>Auto-allotted via SPICe+ during incorporation</td>
+            </tr>
+            <tr>
+              <td><strong>Partnership Firm</strong></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory</span></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory (if TDS applicable)</span></td>
+              <td>Separate PAN required; not auto-allotted</td>
+            </tr>
+            <tr>
+              <td><strong>Sole Proprietorship</strong></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory</span></td>
+              <td><span style="color: var(--orange); font-weight: bold;">⚠ Conditional</span></td>
+              <td>Can use owner's PAN initially; TAN if TDS deducted</td>
+            </tr>
+            <tr>
+              <td><strong>Individual/Freelancer</strong></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory</span></td>
+              <td><span style="color: var(--orange); font-weight: bold;">⚠ If income exceeds threshold</span></td>
+              <td>Required for filing ITR and financial transactions</td>
+            </tr>
+            <tr>
+              <td><strong>Trust/NGO/Association</strong></td>
+              <td><span style="color: var(--green); font-weight: bold;">✓ Mandatory</span></td>
+              <td><span style="color: var(--orange); font-weight: bold;">⚠ If TDS applies</span></td>
+              <td>Separate PAN required</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="success-box">
+        <i class="fas fa-check-circle"></i>
+        <p><strong>✅ Key Takeaway:</strong> Every business must have PAN. TAN is required only if TDS/TCS applies. Most employers and businesses making payments to vendors/contractors must have TAN.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q3 -->
+  <div class="qa-item" id="q3">
+    <div class="qa-number">3</div>
+    <h2 class="qa-question">How to Apply for PAN & TAN?</h2>
+    <div class="qa-content">
+      <p><strong>Both PAN and TAN can be applied through multiple authorized platforms. Here are the official modes:</strong></p>
+
+      <h3 style="color: var(--blue); margin: 20px 0 12px; font-size: 1.1rem;">📱 Online Application (Recommended)</h3>
+      <p>Online applications are faster, easier, and more convenient:</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Visit Official Portal</h3>
+          <p>Go to Protean eGov Technologies Limited or UTI Infrastructure Technology and Services Limited authorized portals</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Fill Application Form</h3>
+          <p>Complete the application with accurate details – PAN (Form 49A) or TAN (Form 49B)</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Upload Documents</h3>
+          <p>Upload identity proof, address proof, and incorporation documents (if applicable)</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Digital Signature</h3>
+          <p>Sign using DSC (for companies/LLP) or Aadhaar OTP (for individuals)</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h3>Pay Fees</h3>
+          <p>Pay processing fee (approx ₹110 for India dispatch)</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <h3>Get Confirmation</h3>
+          <p>Receive acknowledgement number; track application online</p>
+        </div>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 24px 0 12px; font-size: 1.1rem;">🏢 Offline Application</h3>
+      <ul>
+        <li>Visit nearest <strong>Income Tax Department Office</strong></li>
+        <li>Submit physical forms with original documents</li>
+        <li>Slower process (15-20 days)</li>
+        <li>Not recommended for quick registrations</li>
+      </ul>
+
+      <h3 style="color: var(--blue); margin: 24px 0 12px; font-size: 1.1rem;">🔗 Official Authorized Platforms</h3>
+      <ul>
+        <li><strong>Protean eGov Technologies Limited</strong> – www.pancard.gov.in</li>
+        <li><strong>UTI Infrastructure Technology and Services Limited</strong> – www.utiitsl.com</li>
+        <li>Both are authorized by Income Tax Department of India</li>
+      </ul>
+
+      <div class="highlight-box">
+        <i class="fas fa-lightbulb"></i>
+        <p><strong>💡 Tip:</strong> Apply online through official portals for faster processing. Both Protean and UTI offer the same service quality. Choose based on convenience.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q4 -->
+  <div class="qa-item" id="q4">
+    <div class="qa-number">4</div>
+    <h2 class="qa-question">PAN Registration Process (Step-by-Step)</h2>
+    <div class="qa-content">
+      <p>Follow these detailed steps to successfully apply for PAN registration:</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Choose Correct Form</h3>
+          <ul>
+            <li><strong>Form 49A</strong> – For Indian entities (Companies, LLPs, Partnerships)</li>
+            <li><strong>Form 49AA</strong> – For foreign entities and overseas individuals</li>
+          </ul>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Fill Application Details</h3>
+          <ul>
+            <li>Business/Entity name (must match incorporation documents)</li>
+            <li>Date of incorporation / establishment</li>
+            <li>Registered office address</li>
+            <li>Authorized signatory details</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Upload Documents</h3>
+          <ul>
+            <li>Identity proof (Aadhaar, passport, driving license)</li>
+            <li>Address proof (utility bill, rent agreement)</li>
+            <li>Incorporation certificate</li>
+            <li>Board resolution (if applicable)</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Digital Signature</h3>
+          <ul>
+            <li><strong>For Companies/LLP:</strong> Use DSC (Digital Signature Certificate)</li>
+            <li><strong>For Individuals:</strong> Use Aadhaar OTP verification</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h3>Payment of Fees</h3>
+          <ul>
+            <li>Processing fee: <strong>Approx ₹110</strong> (for India dispatch)</li>
+            <li>Payment gateway accepts credit/debit cards, net banking</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <h3>Receive Acknowledgement</h3>
+          <ul>
+            <li>Get acknowledgement number</li>
+            <li>Track status online using this number</li>
+            <li>Check email for updates</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">7</div>
+          <h3>PAN Allotment</h3>
+          <ul>
+            <li>PAN issued within <strong>7-10 working days</strong></li>
+            <li>Receive PAN via email and courier</li>
+            <li>No need for re-verification</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="success-box">
+        <i class="fas fa-check-circle"></i>
+        <p><strong>✅ Processing Timeline:</strong> Online PAN applications are typically processed within 7-10 working days. You'll receive acknowledgement immediately after submission.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q5 -->
+  <div class="qa-item" id="q5">
+    <div class="qa-number">5</div>
+    <h2 class="qa-question">TAN Registration Process (Step-by-Step)</h2>
+    <div class="qa-content">
+      <p>TAN registration is similar to PAN but specifically for entities deducting/collecting taxes. Here's the process:</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Fill Form 49B</h3>
+          <p><strong>Form 49B is mandatory</strong> for TAN application – available on income tax portal and authorized platforms</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Provide Entity Details</h3>
+          <ul>
+            <li>Business name and type</li>
+            <li>Entity address</li>
+            <li>Responsible person details</li>
+            <li>Nature of TDS/TCS activity</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Upload Documents</h3>
+          <ul>
+            <li>Same documents as PAN (identity, address, incorporation)</li>
+            <li>Additional: Business license (if applicable)</li>
+            <li>Bank account details</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Digital Verification</h3>
+          <ul>
+            <li>DSC signing (for companies/LLP)</li>
+            <li>Aadhaar OTP (for individuals)</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h3>Pay Government Fee</h3>
+          <ul>
+            <li>Nominal government processing fee</li>
+            <li>Usually ₹50-100</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <h3>Receive Acknowledgement</h3>
+          <ul>
+            <li>Acknowledgement number provided immediately</li>
+            <li>Track application status online</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">7</div>
+          <h3>TAN Allotment</h3>
+          <ul>
+            <li>TAN issued within <strong>7-10 working days</strong></li>
+            <li>Receive via email and registered address</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <i class="fas fa-exclamation-circle"></i>
+        <p><strong>❗ Important:</strong> TAN should be obtained <strong>before you start deducting TDS</strong>. Filing TDS returns without TAN is illegal and attracts penalties.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q6 -->
+  <div class="qa-item" id="q6">
+    <div class="qa-number">6</div>
+    <h2 class="qa-question">PAN & TAN via Company Incorporation (Important)</h2>
+    <div class="qa-content">
+      <p>If you're registering a <strong>Private Limited Company or LLP</strong>, PAN and TAN are automatically allotted as part of the incorporation process – no separate application needed!</p>
+
+      <h3 style="color: var(--blue); margin: 20px 0 12px; font-size: 1.1rem;">✅ Auto-Allotment for Companies & LLPs</h3>
+      <div class="success-box">
+        <i class="fas fa-check-circle"></i>
+        <p><strong>👉 For Private Limited Company:</strong> PAN & TAN are automatically allotted through <strong>SPICe+ (MCA Online Platform)</strong> during incorporation. No separate application required.</p>
+      </div>
+
+      <div class="success-box">
+        <i class="fas fa-check-circle"></i>
+        <p><strong>👉 For LLP:</strong> PAN & TAN are automatically allotted through <strong>MCA portal</strong> during LLP incorporation. No separate application required.</p>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 20px 0 12px; font-size: 1.1rem;">📄 Documents Issued Together with Incorporation</h3>
+      <ul>
+        <li><strong>Certificate of Incorporation</strong> – Proof of company registration</li>
+        <li><strong>PAN Certificate</strong> – 10-digit tax identification number</li>
+        <li><strong>TAN Certificate</strong> – 10-digit tax deduction number</li>
+        <li>All issued within <strong>1-2 weeks</strong> of incorporation approval</li>
+      </ul>
+
+      <h3 style="color: var(--blue); margin: 20px 0 12px; font-size: 1.1rem;">⏱️ Timeline</h3>
+      <ul>
+        <li><strong>Company Incorporation:</strong> 3-5 business days</li>
+        <li><strong>PAN & TAN Allotment:</strong> Auto-allotted, received within 5-10 days</li>
+        <li><strong>Total Timeline:</strong> 10-15 days from incorporation approval</li>
+      </ul>
+
+      <div class="highlight-box">
+        <i class="fas fa-lightbulb"></i>
+        <p><strong>💡 Benefit:</strong> If you're starting a company, incorporate first – PAN & TAN will be auto-allotted, saving time and effort. Only Partnerships and Sole Proprietorships need to apply separately.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q7 -->
+  <div class="qa-item" id="q7">
+    <div class="qa-number">7</div>
+    <h2 class="qa-question">Documents Required – Detailed Checklist</h2>
+    <div class="qa-content">
+      <p>Prepare these documents before applying for PAN & TAN. The exact requirements vary by entity type:</p>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">📄 For Company / LLP / Partnership Firm</h3>
+      
+      <div style="margin-bottom: 24px;">
+        <h4 style="color: var(--blue); margin-bottom: 12px; font-size: 1rem; font-weight: 600;">Identity & Legal Documents:</h4>
+        <ul>
+          <li><strong>Certificate of Incorporation / Registration</strong> – From MCA or ROC</li>
+          <li><strong>Partnership Deed</strong> – For partnership firms</li>
+          <li><strong>LLP Agreement</strong> – For limited liability partnerships</li>
+          <li><strong>Memorandum of Association (MOA)</strong> – For companies</li>
+          <li><strong>Articles of Association (AOA)</strong> – For companies</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h4 style="color: var(--blue); margin-bottom: 12px; font-size: 1rem; font-weight: 600;">Address Proof:</h4>
+        <ul>
+          <li><strong>Registered office address proof</strong> – From utility bill, rent agreement, property deed</li>
+          <li><strong>Latest utility bill</strong> – Electricity, water, telephone (within 3 months)</li>
+          <li><strong>Rent agreement</strong> – If office is rented</li>
+          <li><strong>Property registration document</strong> – If office is owned</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h4 style="color: var(--blue); margin-bottom: 12px; font-size: 1rem; font-weight: 600;">Authorized Signatory Documents:</h4>
+        <ul>
+          <li><strong>PAN of directors/partners</strong> – (if already have)</li>
+          <li><strong>Aadhaar of authorized signatory</strong></li>
+          <li><strong>Passport or Driving License</strong> – (if Aadhaar not available)</li>
+          <li><strong>Recent photograph</strong> – (4x6 inches, as per specifications)</li>
+          <li><strong>Signature sample</strong> – (on official letterhead or certified)</li>
+          <li><strong>Board Resolution</strong> – (for companies, authorized to apply)</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">📄 For Sole Proprietorship</h3>
+      
+      <ul>
+        <li><strong>Aadhaar of proprietor</strong></li>
+        <li><strong>PAN (if already exists)</strong></li>
+        <li><strong>Business address proof</strong> – Utility bill, rent agreement</li>
+        <li><strong>Photograph</strong> – (4x6 inches)</li>
+        <li><strong>Business registration certificate</strong> – (if registered with local authorities)</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">📄 Additional Documents for TAN</h3>
+      
+      <ul>
+        <li><strong>Bank account details</strong> – Account number, IFSC code</li>
+        <li><strong>Nature of TDS activity</strong> – Description of deductions/collections</li>
+        <li><strong>Responsible person details</strong> – Who will manage TDS compliance</li>
+      </ul>
+
+      <div class="checklist">
+        <h3><i class="fas fa-clipboard-list"></i> Document Preparation Checklist</h3>
+        <div class="checklist-item">All documents in original + certified copies</div>
+        <div class="checklist-item">Documents not older than 6 months (utility bills, etc.)</div>
+        <div class="checklist-item">Photographs in correct format (4x6 inches)</div>
+        <div class="checklist-item">Signatures consistent across all documents</div>
+        <div class="checklist-item">MCA registration details accurate and verified</div>
+        <div class="checklist-item">Address consistent in all documents</div>
+        <div class="checklist-item">Scans in JPG/PDF format (not more than 5MB each)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q8 -->
+  <div class="qa-item" id="q8">
+    <div class="qa-number">8</div>
+    <h2 class="qa-question">Practical Compliance Checklist</h2>
+    <div class="qa-content">
+      <p>Before and after obtaining PAN & TAN, ensure the following for smooth compliance:</p>
+
+      <div class="checklist">
+        <h3><i class="fas fa-check"></i> Pre-Application Steps</h3>
+        <div class="checklist-item">Verify correct entity type (Company, LLP, Partnership, Sole Proprietor)</div>
+        <div class="checklist-item">Ensure entity name matches MCA records exactly</div>
+        <div class="checklist-item">Verify registered office address matches incorporation documents</div>
+        <div class="checklist-item">Collect and verify all required documents</div>
+        <div class="checklist-item">Ensure authorized signatory documents are complete</div>
+        <div class="checklist-item">For companies/LLP: Arrange DSC (Digital Signature Certificate)</div>
+      </div>
+
+      <div class="checklist" style="margin-top: 20px;">
+        <h3><i class="fas fa-check"></i> During Application</h3>
+        <div class="checklist-item">Use official authorized platforms (Protean/UTI)</div>
+        <div class="checklist-item">Fill forms with accurate, verified information</div>
+        <div class="checklist-item">Upload high-quality document scans</div>
+        <div class="checklist-item">Use DSC or Aadhaar OTP for digital signature</div>
+        <div class="checklist-item">Keep acknowledgement number for tracking</div>
+        <div class="checklist-item">Note application submission date</div>
+      </div>
+
+      <div class="checklist" style="margin-top: 20px;">
+        <h3><i class="fas fa-check"></i> Post-Allotment Steps</h3>
+        <div class="checklist-item">Receive and verify PAN/TAN certificates</div>
+        <div class="checklist-item">Link PAN with bank account immediately</div>
+        <div class="checklist-item">Link PAN with GST registration (if applicable)</div>
+        <div class="checklist-item">Update PAN/TAN in all financial records</div>
+        <div class="checklist-item">Inform vendors and clients of new PAN/TAN</div>
+        <div class="checklist-item">File first ITR with new PAN (if applicable)</div>
+        <div class="checklist-item">File first TDS return with new TAN (if applicable)</div>
+        <div class="checklist-item">Maintain soft and hard copies of certificates</div>
+        <div class="checklist-item">Avoid duplicate PAN applications (illegal)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q9 -->
+  <div class="qa-item" id="q9">
+    <div class="qa-number">9</div>
+    <h2 class="qa-question">Timeline & Validity</h2>
+    <div class="qa-content">
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Process Step</th>
+              <th>Timeline</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Online Application Submission</strong></td>
+              <td>Immediate</td>
+              <td>Acknowledgement received instantly</td>
+            </tr>
+            <tr>
+              <td><strong>Document Verification</strong></td>
+              <td>2-3 days</td>
+              <td>Authority verifies submitted documents</td>
+            </tr>
+            <tr>
+              <td><strong>Processing</strong></td>
+              <td>4-7 days</td>
+              <td>Authority processes application</td>
+            </tr>
+            <tr>
+              <td><strong>PAN/TAN Allotment</strong></td>
+              <td>7-10 working days</td>
+              <td>Certificate issued (total from submission)</td>
+            </tr>
+            <tr>
+              <td><strong>Delivery by Courier</strong></td>
+              <td>5-7 days after allotment</td>
+              <td>Physical copy delivered to address</td>
+            </tr>
+            <tr>
+              <td><strong>Total Timeline (Online)</strong></td>
+              <td><strong>10-15 working days</strong></td>
+              <td>Fastest mode; includes courier delivery</td>
+            </tr>
+            <tr>
+              <td><strong>Offline Application Processing</strong></td>
+              <td>15-30 days</td>
+              <td>Not recommended; slower process</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 24px 0 12px; font-size: 1.1rem;">♾️ Validity & Renewal</h3>
+      <ul>
+        <li><strong>PAN Validity:</strong> Lifetime – No renewal required ever</li>
+        <li><strong>TAN Validity:</strong> Lifetime – No renewal required ever</li>
+        <li><strong>PAN Changes:</strong> Once allotted, PAN cannot be changed unless rectification is needed</li>
+        <li><strong>Corrections:</strong> If errors in name/address, apply for correction within 30 days of allotment</li>
+      </ul>
+
+      <div class="success-box">
+        <i class="fas fa-check-circle"></i>
+        <p><strong>✅ Key Point:</strong> PAN and TAN are permanent once allotted. You receive them once in a lifetime and they never expire or need renewal.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Q10 -->
+  <div class="qa-item" id="q10">
+    <div class="qa-number">10</div>
+    <h2 class="qa-question">Penalties for Non-Compliance</h2>
+    <div class="qa-content">
+      <p>Non-compliance with PAN & TAN regulations attracts serious penalties and legal consequences. Understand the risks:</p>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">❌ Penalties for No PAN</h3>
+      <div class="highlight-box">
+        <i class="fas fa-exclamation-triangle"></i>
+        <ul>
+          <li><strong>Penalty Amount:</strong> Up to <strong>₹10,000</strong></li>
+          <li><strong>When Applied:</strong> If PAN not obtained despite being mandatory</li>
+          <li><strong>Impact:</strong> Bank accounts closed, GST registration cancelled, ITR filing blocked</li>
+          <li><strong>Consequences:</strong> Loss of business credibility, loan rejections</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">❌ Penalties for No TAN</h3>
+      <div class="highlight-box">
+        <i class="fas fa-exclamation-triangle"></i>
+        <ul>
+          <li><strong>Cannot File TDS Returns</strong> – Illegal to deduct TDS without TAN</li>
+          <li><strong>TDS Payment Refusal</strong> – Government won't accept TDS payments</li>
+          <li><strong>Penalty Amount:</strong> ₹200 per day for each day of non-filing</li>
+          <li><strong>Continuous Penalty:</strong> Accumulates daily, leading to huge amounts</li>
+          <li><strong>Criminal Prosecution:</strong> Possible in severe cases</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">❌ Late TDS Return Filing</h3>
+      <ul>
+        <li><strong>Penalty:</strong> ₹200 per day for each day after due date</li>
+        <li><strong>Interest:</strong> 1% per month on unpaid TDS amount</li>
+        <li><strong>Consequences:</strong> Deduction of refunds, suspension of business licenses</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">❌ Duplicate PAN Applications</h3>
+      <ul>
+        <li><strong>Crime:</strong> Applying for multiple PAN for same entity is illegal</li>
+        <li><strong>Penalty:</strong> Criminal prosecution + fine + imprisonment</li>
+        <li><strong>Action Taken:</strong> All duplicate PANs get cancelled</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin: 20px 0 12px; font-size: 1.1rem;">❌ Other Non-Compliance Penalties</h3>
+      <ul>
+        <li><strong>Incorrect PAN Information:</strong> ₹1,000 penalty + correction fee</li>
+        <li><strong>Misuse of PAN:</strong> Criminal penalties + imprisonment</li>
+        <li><strong>Non-Linking of PAN with GST:</strong> GST registration cancellation</li>
+        <li><strong>Non-Declaration in ITR:</strong> Prosecution and penalties</li>
+      </ul>
+
+      <div class="highlight-box">
+        <i class="fas fa-exclamation-circle"></i>
+        <p><strong>❗ Critical Warning:</strong> Ignoring PAN & TAN requirements is not a minor compliance issue – it can lead to legal action, imprisonment, and permanent business damage. Always ensure timely and accurate registration.</p>
+      </div>
+
+      <div class="success-box">
+        <i class="fas fa-check-circle"></i>
+        <p><strong>✅ Best Practice:</strong> Apply for PAN & TAN immediately upon business registration. The process is simple, inexpensive, and quick. Avoiding it creates only problems and penalties.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- DOWNLOADABLE RESOURCES -->
+  <div style="margin-bottom: 80px;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--blue); margin-bottom: 30px; text-align: center;">📥 Important Forms & Download Links</h2>
+
+    <h3 style="color: var(--blue); margin-bottom: 16px; font-size: 1.1rem;">🔗 PAN Application Resources</h3>
+    <div class="download-section">
+      <div class="download-grid">
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="download-info">
+            <h4>Apply PAN Online</h4>
+            <p>Official portal for PAN registration</p>
+          </div>
+        </div>
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="download-info">
+            <h4>Form 49A (PDF)</h4>
+            <p>PAN application form for Indian entities</p>
+          </div>
+        </div>
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="download-info">
+            <h4>Form 49AA (PDF)</h4>
+            <p>PAN application for foreign entities</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="color: var(--blue); margin-bottom: 16px; font-size: 1.1rem; margin-top: 30px;">🔗 TAN Application Resources</h3>
+    <div class="download-section">
+      <div class="download-grid">
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="download-info">
+            <h4>Form 49B (PDF)</h4>
+            <p>TAN application form (mandatory)</p>
+          </div>
+        </div>
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="download-info">
+            <h4>Apply for TAN Online</h4>
+            <p>Official TAN registration portal</p>
+          </div>
+        </div>
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="download-info">
+            <h4>TAN Guidelines</h4>
+            <p>Official guidelines for TAN registration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="color: var(--blue); margin-bottom: 16px; font-size: 1.1rem; margin-top: 30px;">🔗 Status Tracking & Support</h3>
+    <div class="download-section">
+      <div class="download-grid">
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-search"></i></div>
+          <div class="download-info">
+            <h4>Track PAN/TAN Status</h4>
+            <p>Check your application status online</p>
+          </div>
+        </div>
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-book"></i></div>
+          <div class="download-info">
+            <h4>FAQs & Help Center</h4>
+            <p>Income Tax Department help resources</p>
+          </div>
+        </div>
+        <div class="download-item">
+          <div class="download-icon"><i class="fas fa-phone"></i></div>
+          <div class="download-info">
+            <h4>Contact IT Department</h4>
+            <p>Customer support and assistance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Need Expert Guidance on PAN & TAN?</h2>
+    <p>Our compliance experts at Trugydex Solutions can guide you through the entire PAN & TAN registration process, ensure timely compliance, and help you avoid penalties.</p>
+    <a href="index.html#contact" class="btn-cta">Get Expert Consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2024 Trugydex Solutions Private Limited. All rights reserved.</p>
+  <p>Sahi Salah Suchan — Compliance & Regulatory Expertise</p>
+</footer>
+
+</body>
+</html>
