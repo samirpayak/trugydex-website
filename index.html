@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trugydex Solutions Private Limited | Sahi Salah Suchan</title>
+<meta name="description" content="Trugydex Solutions – Your trusted partner in Stock Broking Compliance, SEBI Regulations, Research Analyst Registration, DP Regulations and Corporate Compliance.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #003087;
+    --blue-dark: #001f5b;
+    --blue-light: #e8eef8;
+    --green: #2E7D32;
+    --green-light: #e8f5e9;
+    --white: #ffffff;
+    --gray: #f5f6fa;
+    --text: #1a1a2e;
+    --muted: #5a6072;
+    --border: #dde3f0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(0,48,135,0.07);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { height: 48px; width: auto; object-fit: contain; }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--blue); line-height: 1; }
+  .logo-name span { color: var(--green); }
+  .logo-tagline { font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta {
+    background: var(--blue); color: var(--white); padding: 10px 22px;
+    border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--blue-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, #1a4f8a 100%);
+    display: flex; align-items: center;
+    padding: 100px 5% 60px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -80px; right: -80px;
+    width: 500px; height: 500px;
+    background: rgba(46,125,50,0.15);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -100px; left: -60px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(46,125,50,0.2); border: 1px solid rgba(46,125,50,0.4);
+    color: #81c784; padding: 6px 14px; border-radius: 20px;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .hero-badge span { width: 6px; height: 6px; background: #81c784; border-radius: 50%; display: inline-block; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--white); line-height: 1.2; margin-bottom: 20px;
+  }
+  .hero h1 em { color: #81c784; font-style: normal; }
+  .hero p { color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.8; margin-bottom: 36px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--green); color: var(--white);
+    padding: 13px 28px; border-radius: 6px; text-decoration: none;
+    font-size: 15px; font-weight: 500; transition: all .2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: #1b5e20; transform: translateY(-1px); }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.4); color: var(--white);
+    padding: 13px 28px; border-radius: 6px; text-decoration: none;
+    font-size: 15px; font-weight: 500; transition: all .2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); }
+  .hero-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .hero-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px; padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform .2s;
+  }
+  .hero-card:hover { transform: translateY(-3px); }
+  .hero-card-icon {
+    width: 40px; height: 40px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px; font-size: 18px;
+  }
+  .icon-green { background: rgba(46,125,50,0.3); }
+  .icon-blue { background: rgba(255,255,255,0.15); }
+  .hero-card h3 { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  .hero-card p { font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 5%;
+  }
+  .stats-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 20px; text-align: center;
+  }
+  .stat-item { padding: 10px; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--blue); }
+  .stat-num span { color: var(--green); }
+  .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+  /* ── SECTION BASE ── */
+  section { padding: 80px 5%; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-tag {
+    display: inline-block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 600; color: var(--green); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--blue); margin-bottom: 14px;
+  }
+  .section-sub { font-size: 16px; color: var(--muted); max-width: 600px; line-height: 1.7; }
+  .section-header { margin-bottom: 50px; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-sub { margin: 0 auto; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--gray); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .about-visual {
+    position: relative;
+    background: var(--blue);
+    border-radius: 16px; padding: 40px;
+    color: var(--white);
+    overflow: hidden;
+  }
+  .about-visual::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: rgba(46,125,50,0.2);
+    border-radius: 50%;
+  }
+  .about-visual h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 16px; position: relative; }
+  .about-visual p { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.8; position: relative; }
+  .about-pillars { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; position: relative; }
+  .pillar { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; font-weight: 500; }
+  .pillar-dot { width: 8px; height: 8px; background: #81c784; border-radius: 50%; flex-shrink: 0; }
+  .about-text h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--blue); margin-bottom: 16px; }
+  .about-text p { color: var(--muted); line-height: 1.8; margin-bottom: 16px; font-size: 15px; }
+  .about-creds { display: flex; gap: 20px; margin-top: 24px; flex-wrap: wrap; }
+  .cred { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--blue); }
+  .cred-icon { width: 32px; height: 32px; background: var(--blue-light); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--white); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card {
+    border: 1px solid var(--border); border-radius: 12px; padding: 28px;
+    transition: all .25s; cursor: pointer;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--green);
+    transform: scaleY(0); transform-origin: bottom;
+    transition: transform .25s;
+  }
+  .service-card:hover { border-color: transparent; box-shadow: 0 8px 32px rgba(0,48,135,0.1); transform: translateY(-3px); }
+  .service-card:hover::before { transform: scaleY(1); }
+  .service-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: var(--blue-light); display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 16px; transition: background .25s;
+  }
+  .service-card:hover .service-icon { background: var(--green-light); }
+  .service-card h3 { font-size: 16px; font-weight: 600; color: var(--blue); margin-bottom: 8px; }
+  .service-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+  .service-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 14px; font-size: 13px; font-weight: 500; color: var(--green); text-decoration: none; }
+  .service-link:hover { gap: 8px; }
+
+  /* ── WHY CHOOSE US ── */
+  .why { background: var(--blue); padding: 80px 5%; }
+  .why-inner { max-width: 1200px; margin: 0 auto; }
+  .why .section-title { color: var(--white); }
+  .why .section-sub { color: rgba(255,255,255,0.75); }
+  .why .section-tag { color: #81c784; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
+  .why-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px; padding: 28px;
+    transition: all .25s;
+  }
+  .why-card:hover { background: rgba(255,255,255,0.14); transform: translateY(-3px); }
+  .why-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: #81c784; font-weight: 700; margin-bottom: 8px; }
+  .why-card h3 { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+  .why-card p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; }
+
+  /* ── INDUSTRIES ── */
+  .industries { background: var(--gray); }
+  .ind-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .ind-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px 20px; text-align: center;
+    transition: all .2s;
+  }
+  .ind-card:hover { border-color: var(--blue); box-shadow: 0 4px 20px rgba(0,48,135,0.08); }
+  .ind-icon { font-size: 28px; margin-bottom: 10px; }
+  .ind-card h4 { font-size: 14px; font-weight: 600; color: var(--blue); }
+
+  /* ── TEAM ── */
+  .team { background: var(--white); }
+  .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 700px; margin: 0 auto; }
+  .team-card {
+    background: var(--gray); border-radius: 14px; padding: 30px;
+    display: flex; align-items: center; gap: 20px;
+    border: 1px solid var(--border); transition: all .2s;
+  }
+  .team-card:hover { box-shadow: 0 6px 24px rgba(0,48,135,0.1); transform: translateY(-2px); }
+  .team-avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--blue); display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 20px; color: var(--white);
+    flex-shrink: 0; position: relative;
+  }
+  .team-avatar::after {
+    content: ''; position: absolute; bottom: 2px; right: 2px;
+    width: 14px; height: 14px; background: var(--green);
+    border-radius: 50%; border: 2px solid var(--gray);
+  }
+  .team-info h3 { font-size: 16px; font-weight: 600; color: var(--blue); }
+  .team-info .role { font-size: 12px; color: var(--green); font-weight: 500; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .team-info .phone { font-size: 13px; color: var(--muted); }
+
+  /* ── FAQ PREVIEW ── */
+  .faq-preview { background: var(--gray); }
+  .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden;
+  }
+  .faq-q {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 22px; cursor: pointer; font-weight: 500; font-size: 15px; color: var(--blue);
+    transition: background .15s;
+  }
+  .faq-q:hover { background: var(--blue-light); }
+  .faq-toggle {
+    width: 24px; height: 24px; border-radius: 50%; background: var(--blue-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--blue); flex-shrink: 0; transition: all .2s;
+  }
+  .faq-item.open .faq-toggle { background: var(--green); color: var(--white); transform: rotate(45deg); }
+  .faq-a {
+    padding: 0 22px; max-height: 0; overflow: hidden;
+    transition: max-height .35s ease, padding .25s;
+    font-size: 14px; color: var(--muted); line-height: 1.8;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 22px 18px; }
+  .faq-more { text-align: center; margin-top: 30px; }
+  .btn-green {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green); color: var(--white);
+    padding: 12px 28px; border-radius: 6px; text-decoration: none;
+    font-size: 14px; font-weight: 500; transition: all .2s;
+  }
+  .btn-green:hover { background: #1b5e20; transform: translateY(-1px); }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .contact-info h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--blue); margin-bottom: 14px; }
+  .contact-info p { color: var(--muted); line-height: 1.8; margin-bottom: 28px; font-size: 15px; }
+  .contact-items { display: flex; flex-direction: column; gap: 16px; }
+  .contact-item { display: flex; align-items: center; gap: 14px; }
+  .contact-item-icon { width: 44px; height: 44px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .contact-item h4 { font-size: 13px; color: var(--muted); font-weight: 400; }
+  .contact-item p { font-size: 15px; font-weight: 500; color: var(--blue); }
+  .contact-form { background: var(--gray); border-radius: 16px; padding: 36px; }
+  .contact-form h3 { font-size: 18px; font-weight: 600; color: var(--blue); margin-bottom: 22px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .form-group label { font-size: 13px; font-weight: 500; color: var(--text); }
+  .form-group input, .form-group textarea, .form-group select {
+    padding: 11px 14px; border: 1px solid var(--border); border-radius: 7px;
+    font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--text);
+    background: var(--white); transition: border .2s; outline: none;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--blue); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .btn-submit {
+    width: 100%; padding: 13px; background: var(--blue); color: var(--white);
+    border: none; border-radius: 7px; font-size: 15px; font-weight: 500;
+    cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .2s;
+  }
+  .btn-submit:hover { background: var(--blue-dark); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--blue-dark); color: rgba(255,255,255,0.75);
+    padding: 50px 5% 24px;
+  }
+  .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-brand .logo-name { color: var(--white); font-size: 20px; }
+  .footer-brand .logo-tagline { color: rgba(255,255,255,0.5); }
+  .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-top: 14px; }
+  .footer-col h4 { font-size: 13px; font-weight: 600; color: var(--white); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: #81c784; }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.45); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .services-grid, .why-grid { grid-template-columns: 1fr 1fr; }
+    .ind-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .hero-cards { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .team-grid { grid-template-columns: 1fr; max-width: 420px; }
+  }
+  @media (max-width: 600px) {
+    .services-grid, .why-grid, .ind-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .about-creds { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="TG_LOGOO.png" alt="Trugydex Solutions Private Limited">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get Consultation</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span></span>SEBI Registered Compliance Experts</div>
+      <h1>Your Trusted Partner in <em>Stock Broking</em> Compliance</h1>
+      <p>We provide comprehensive guidance to help brokerage firms navigate complex regulatory landscapes — SEBI, Companies Act, DP Regulations, Exchange Rules and more.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Explore Services →</a>
+        <a href="#contact" class="btn-outline">Talk to an Expert</a>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card">
+        <div class="hero-card-icon icon-green">📋</div>
+        <h3>Regulatory Compliance</h3>
+        <p>SEBI, NSE, BSE & MCX compliance advisory</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon icon-blue">🔍</div>
+        <h3>Internal Audits</h3>
+        <p>Concurrent & internal audits for stock brokers</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon icon-green">📄</div>
+        <h3>Licensing & Registration</h3>
+        <p>Stock Broker, RA, IA, PMS & AIF licenses</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon icon-blue">🎓</div>
+        <h3>Training Programs</h3>
+        <p>Compliance training for brokerage teams</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">50<span>+</span></div>
+      <div class="stat-label">Clients Served</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">10<span>+</span></div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100<span>%</span></div>
+      <div class="stat-label">Compliance Focus</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5<span>+</span></div>
+      <div class="stat-label">Regulatory Domains</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual">
+        <h3>Welcome to Trugydex Solutions</h3>
+        <p>The role of a Stock Broking compliance consultancy is to provide expertise and guidance to help brokerage firms navigate the complex regulatory landscape, maintain their integrity, and protect their clients' interests.</p>
+        <div class="about-pillars">
+          <div class="pillar"><span class="pillar-dot"></span>Regulations &amp; Rules</div>
+          <div class="pillar"><span class="pillar-dot"></span>Compliance Standards</div>
+          <div class="pillar"><span class="pillar-dot"></span>Transparency &amp; Policies</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">ABOUT US</div>
+        <h2>Expert Compliance Consultancy for Financial Markets</h2>
+        <p>Trugydex Solutions Private Limited is a dedicated compliance consultancy specializing in the Indian capital markets regulatory framework. Our team brings deep understanding of financial regulations, market practices, and evolving industry trends.</p>
+        <p>We help brokerage firms, research analysts, depository participants and other market intermediaries stay ahead of regulatory requirements and operate with full compliance.</p>
+        <div class="about-creds">
+          <div class="cred"><div class="cred-icon">⚖️</div>Companies Act Expert</div>
+          <div class="cred"><div class="cred-icon">📊</div>SEBI Specialist</div>
+          <div class="cred"><div class="cred-icon">🏦</div>DP Regulations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">OUR SERVICES</div>
+      <h2 class="section-title">Comprehensive Compliance Solutions</h2>
+      <p class="section-sub">One-stop solutions for all your regulatory and compliance requirements in the Indian financial markets.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Regulatory Compliance</h3>
+        <p>Advising brokerage firms on SEBI regulations, Exchange rules, and all applicable laws governing their operations and client servicing.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔎</div>
+        <h3>Internal &amp; Concurrent Audits</h3>
+        <p>Performing periodic audits to assess compliance, uncover deficiencies, and recommend corrective actions as per SEBI norms.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <h3>Licensing &amp; Registration</h3>
+        <p>End-to-end advisory for Stock Broker, Research Analyst, Investment Advisor, PMS, and AIF license registration with SEBI.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3>Compliance Training</h3>
+        <p>Conducting training sessions for brokerage employees on compliance standards, ethical practices, operations setup, and regulatory changes.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏛️</div>
+        <h3>Companies Act Advisory</h3>
+        <p>Expert guidance on Companies Act, 2013 compliances for listed and unlisted entities including board meetings, secretarial audits and filings.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔗</div>
+        <h3>DP Regulations &amp; Operations</h3>
+        <p>Advisory on SEBI (Depositories &amp; Participants) Regulations, CDSL/NSDL operational procedures and compliance requirements.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="section-header">
+      <div class="section-tag">WHY TRUGYDEX</div>
+      <h2 class="section-title">Why Choose Us?</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.7)">We bring deep domain expertise, personalized approach and complete transparency to every client engagement.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>Expert Team</h3>
+        <p>Our team comprises skilled professionals with deep understanding of the stock market, SEBI regulations and Indian financial laws — ensuring you receive the best guidance.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>Personalized Approach</h3>
+        <p>We believe every broker is unique. Our consultancy services are tailored to your individual needs, risk tolerance, and business model.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Transparency</h3>
+        <p>Honesty and transparency are at the core of our business. We provide clear insights and advice to help you make informed compliance decisions.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <h3>End-to-End Support</h3>
+        <p>From registration to ongoing compliance, we are with you at every step — from business setup to regulatory inspections and audits.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <h3>Up-to-Date Knowledge</h3>
+        <p>We continuously track SEBI circulars, exchange notifications, and regulatory changes so you are always ahead of compliance requirements.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <h3>Proven Track Record</h3>
+        <p>Trusted by stock brokers, research analysts and depository participants across India for reliable, professional compliance advisory services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-tag">INDUSTRIES WE SERVE</div>
+      <h2 class="section-title">Who We Work With</h2>
+      <p class="section-sub">We serve a wide range of SEBI registered market intermediaries and financial entities.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card"><div class="ind-icon">📈</div><h4>Stock Brokers</h4></div>
+      <div class="ind-card"><div class="ind-icon">🔬</div><h4>Research Analysts</h4></div>
+      <div class="ind-card"><div class="ind-icon">🏦</div><h4>Depository Participants</h4></div>
+      <div class="ind-card"><div class="ind-icon">💼</div><h4>Investment Advisors</h4></div>
+      <div class="ind-card"><div class="ind-icon">🏢</div><h4>PMS Managers</h4></div>
+      <div class="ind-card"><div class="ind-icon">📊</div><h4>AIF Managers</h4></div>
+      <div class="ind-card"><div class="ind-icon">🏛️</div><h4>Merchant Bankers</h4></div>
+      <div class="ind-card"><div class="ind-icon">⚖️</div><h4>Listed Companies</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-tag">OUR TEAM</div>
+      <h2 class="section-title">Meet Our Experts</h2>
+      <p class="section-sub">Experienced professionals dedicated to providing you the best compliance guidance.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">JK</div>
+        <div class="team-info">
+          <div class="role">Company Secretary</div>
+          <h3>CS Jay Kular</h3>
+          <div class="phone">📞 +91 8460042325</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:var(--green)">SP</div>
+        <div class="team-info">
+          <div class="role">Compliance Specialist</div>
+          <h3>Samir Payak</h3>
+          <div class="phone">📞 +91 80000 73534</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ PREVIEW -->
+<section class="faq-preview" id="faq">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Quick answers to common questions about SEBI compliance, stock broker regulations, and our services.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          What is the process to register as a Stock Broker with SEBI?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">To register as a Stock Broker with SEBI, an entity must first become a member of a recognised stock exchange (NSE/BSE/MCX), meet the minimum net worth requirements, appoint a Principal Officer with NISM certifications, submit Form A with required documents to SEBI, and pay the applicable registration fees. Trugydex guides you through each step of this process.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          What are the compliance requirements for a SEBI Registered Research Analyst?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">A SEBI Registered Research Analyst must maintain an annual compliance report, conduct half-yearly audits, comply with SEBI (Research Analysts) Regulations 2014 including disclosure norms, maintain records for 5 years, publish research reports with required disclosures, and comply with code of conduct provisions. Regular circular updates from SEBI must also be implemented.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          What is the scope of Internal Audit for a Stock Broker?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">The internal audit of a stock broker covers KYC and client onboarding processes, contract notes and bills, margin collection and reporting, fund and securities segregation, risk management systems, exchange and SEBI compliance, redressal of investor grievances, back-office operations, and AML/CFT compliance as prescribed by SEBI and exchange circulars.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          How can Trugydex help with SEBI inspection preparedness?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Trugydex assists firms in conducting pre-inspection gap analysis, preparing compliance documentation, reviewing policies and procedures, ensuring records are maintained as per regulatory requirements, training key personnel, and providing mock inspection support to ensure your firm is fully prepared for any SEBI or Exchange inspection.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          What are the net worth requirements for a Stock Broker?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">As per SEBI regulations, the minimum net worth for a Stock Broker is ₹30 lakhs for BSE/NSE Cash segment, ₹100 lakhs for Futures &amp; Options segment, and ₹500 lakhs for Currency Derivatives. These requirements are subject to periodic revision by SEBI, and Trugydex keeps you updated on any changes.</div>
+      </div>
+    </div>
+    <div class="faq-more">
+      <a href="faq.html" class="btn-green">View All FAQs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-tag">CONTACT US</div>
+        <h2>Get Expert Compliance Consultation</h2>
+        <p>Reach out to our team for any compliance query, registration assistance, or audit support. We respond promptly to all enquiries.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <h4>Call Us</h4>
+              <p>+91 8460042325 | +91 80000 73534</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div>
+            <div>
+              <h4>Website</h4>
+              <p>www.trugydex.in</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🏢</div>
+            <div>
+              <h4>Company</h4>
+              <p>Trugydex Solutions Private Limited</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send us a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Full Name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+          <label>Service Required</label>
+          <select>
+            <option>Select a Service</option>
+            <option>Stock Broker Registration</option>
+            <option>Research Analyst Registration</option>
+            <option>Internal / Concurrent Audit</option>
+            <option>Compliance Advisory</option>
+            <option>DP Regulations</option>
+            <option>Companies Act Advisory</option>
+            <option>Training Program</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your Query</label>
+          <textarea placeholder="Describe your compliance requirement..."></textarea>
+        </div>
+        <button class="btn-submit">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="TG_LOGOO.png" alt="Trugydex" style="height:52px;width:auto;filter:brightness(0) invert(1);margin-bottom:12px;display:block;">
+      <p>Your trusted partner in Stock Broking compliance, SEBI regulations and financial market consultancy. Expert guidance for every stage of your compliance journey.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Regulatory Compliance</a>
+      <a href="#services">Internal Audits</a>
+      <a href="#services">Licensing &amp; Registration</a>
+      <a href="#services">Compliance Training</a>
+      <a href="#services">Companies Act</a>
+      <a href="#services">DP Regulations</a>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#team">Our Team</a>
+      <a href="faq.html">FAQ</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+918460042325">CS Jay Kular</a>
+      <a href="tel:+918000073534">Samir Payak</a>
+      <a href="http://www.trugydex.in">www.trugydex.in</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Trugydex Solutions Private Limited. All rights reserved.</span>
+    <span>www.trugydex.in</span>
+  </div>
+</footer>
+
+<script>
+function toggleFAQ(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Smooth nav active state
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,48,135,0.12)' : '0 2px 12px rgba(0,48,135,0.07)';
+});
+</script>
+</body>
+</html>
