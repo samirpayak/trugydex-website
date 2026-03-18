@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Registration & Company Incorporation | Trugydex Solutions</title>
-<meta name="description" content="Complete guide to business registration and company incorporation in India. Learn about PAN, GST, MSME, Startup India, incorporation rules, and more.">
-<link rel="canonical" href="https://trugydex.in/business-registration.html">
+<title>Business Registrations FAQs | Trugydex Solutions</title>
+<meta name="description" content="Complete guide to business registrations in India – PAN, GST, MSME, Startup India, Shop & Establishment License, and more.">
+<link rel="canonical" href="https://trugydex.in/registrations-faq.html">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -17,22 +17,14 @@
     --green-light: #e8f5e9;
     --white: #ffffff;
     --gray: #f5f6fa;
-    --gray-dark: #f0f2f7;
     --text: #1a1a2e;
     --muted: #5a6072;
     --border: #dde3f0;
-    --amber: #f59e0b;
-    --red: #dc2626;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { 
-    font-family: 'DM Sans', sans-serif; 
-    color: var(--text); 
-    background: var(--white); 
-    line-height: 1.6;
-  }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
 
   /* ── NAV ── */
   nav {
@@ -73,19 +65,24 @@
     background: rgba(46,125,50,0.12);
     border-radius: 50%;
   }
+  .page-header-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(46,125,50,0.2); border: 1px solid rgba(46,125,50,0.4);
+    color: #81c784; padding: 6px 14px; border-radius: 20px;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 16px;
+  }
   .page-header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.6rem;
     margin-bottom: 12px;
     font-weight: 700;
-    position: relative;
   }
   .page-header p {
     color: rgba(255,255,255,0.85);
     font-size: 16px;
     max-width: 600px;
     margin: 0 auto;
-    position: relative;
   }
 
   /* ── BREADCRUMB ── */
@@ -98,362 +95,327 @@
   .breadcrumb a { color: var(--blue); text-decoration: none; }
   .breadcrumb a:hover { text-decoration: underline; }
 
-  /* ── SECTION BASE ── */
-  section { padding: 80px 5%; }
-  .section-inner { max-width: 1200px; margin: 0 auto; }
-
-  /* ── QUICK PROCESS STEPS ── */
-  .process-section {
-    background: var(--gray);
+  /* ── REGISTRATION CATEGORIES ── */
+  .categories-section {
+    max-width: 1200px; margin: 60px auto 80px;
+    padding: 0 5%;
   }
-  .process-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    margin-bottom: 40px;
-  }
-  .process-card {
-    background: var(--white);
-    border: 2px solid var(--border);
-    border-radius: 12px;
-    padding: 28px;
+  .section-header {
     text-align: center;
-    transition: all .3s ease;
-    position: relative;
+    margin-bottom: 50px;
   }
-  .process-card:hover {
-    border-color: var(--blue);
-    box-shadow: 0 12px 32px rgba(0,48,135,0.12);
-    transform: translateY(-4px);
-  }
-  .process-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--blue), var(--green));
-    color: var(--white);
-    border-radius: 50%;
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 16px;
-  }
-  .process-card h3 {
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
     color: var(--blue);
+    margin-bottom: 12px;
+  }
+  .section-header p {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+  .category-card {
+    background: var(--gray);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .category-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, var(--blue-light) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+  }
+  .category-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,48,135,0.12);
+  }
+  .category-card:hover::before { opacity: 1; }
+  .category-icon {
+    font-size: 40px;
+    color: var(--blue);
+    margin-bottom: 16px;
+    display: inline-block;
+    transition: transform .3s;
+  }
+  .category-card:hover .category-icon {
+    transform: scale(1.15) rotateY(10deg);
+  }
+  .category-card h3 {
     font-size: 18px;
+    color: var(--blue);
     margin-bottom: 10px;
     font-weight: 600;
   }
-  .process-card p {
+  .category-card p {
     color: var(--muted);
     font-size: 14px;
-    line-height: 1.6;
   }
 
-  /* ── COMPARISON TABLE ── */
-  .comparison-section {
-    background: var(--white);
+  /* ── CHECKLIST SECTION ── */
+  .checklist-section {
+    background: var(--blue-light);
+    padding: 60px 5%;
+    margin-bottom: 80px;
+    border-radius: 12px;
   }
-  .section-title {
+  .checklist-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .checklist-section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: var(--blue);
     margin-bottom: 40px;
     text-align: center;
   }
-  .table-responsive {
-    overflow-x: auto;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    background: var(--white);
-  }
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-  }
-  .comparison-table thead {
-    background: var(--blue);
-    color: var(--white);
-  }
-  .comparison-table th {
-    padding: 18px;
-    text-align: left;
-    font-weight: 600;
-  }
-  .comparison-table td {
-    padding: 16px 18px;
-    border-bottom: 1px solid var(--border);
-  }
-  .comparison-table tbody tr:hover {
-    background: var(--gray-dark);
-  }
-  .comparison-table .type-header {
-    font-weight: 600;
-    color: var(--blue);
-  }
-  .check { color: var(--green); font-weight: 600; }
-  .cross { color: var(--red); font-weight: 600; }
-
-  /* ── REQUIREMENTS CHECKLIST ── */
-  .checklist-section {
-    background: var(--blue-light);
-    border-radius: 12px;
-  }
   .checklist-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
-  }
-  .checklist-group {
-    background: var(--white);
-    padding: 24px;
-    border-radius: 10px;
-    border-left: 4px solid var(--green);
   }
   .checklist-group h3 {
     color: var(--green);
     font-size: 16px;
     margin-bottom: 16px;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; align-items: center; gap: 8px;
   }
   .checklist-group h3::before {
     content: '✓';
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
+    align-items: center; justify-content: center;
+    width: 24px; height: 24px;
     background: var(--green);
     color: var(--white);
     border-radius: 50%;
     font-size: 14px;
     font-weight: bold;
-    flex-shrink: 0;
   }
   .checklist-item {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+    display: flex; gap: 10px;
+    margin-bottom: 12px;
     color: var(--text);
     font-size: 14px;
-    line-height: 1.5;
   }
   .checklist-item::before {
     content: '→';
     color: var(--green);
     font-weight: bold;
     flex-shrink: 0;
-    font-size: 16px;
   }
 
   /* ── FAQ ACCORDION ── */
   .faq-section {
-    background: var(--white);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 5%;
+    margin-bottom: 100px;
   }
-  .faq-category {
+  .faq-header {
+    text-align: center;
     margin-bottom: 50px;
   }
-  .faq-category-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .faq-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
     color: var(--blue);
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--border);
+    margin-bottom: 12px;
   }
-  .faq-category-icon {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--blue-light);
-    border-radius: 6px;
+  .faq-header p {
+    color: var(--muted);
     font-size: 16px;
   }
-  .faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
   .faq-item {
-    margin-bottom: 16px;
     border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all .3s ease;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: var(--white);
+    transition: all .3s;
   }
   .faq-item:hover {
     border-color: var(--blue);
-    box-shadow: 0 6px 16px rgba(0,48,135,0.08);
-  }
-  .faq-item.active {
-    border-color: var(--blue);
-    box-shadow: 0 6px 16px rgba(0,48,135,0.12);
+    box-shadow: 0 4px 16px rgba(0,48,135,0.08);
   }
   .faq-question {
-    width: 100%;
-    background: var(--white);
-    border: none;
-    padding: 20px;
-    text-align: left;
-    cursor: pointer;
+    padding: 20px 24px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
     font-family: inherit;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--blue);
-    transition: all .2s;
+    font-size: 16px;
+    color: var(--text);
+    font-weight: 500;
+    transition: color .2s;
   }
   .faq-item.active .faq-question {
+    color: var(--blue);
     background: var(--blue-light);
   }
-  .faq-question:hover {
-    color: var(--blue-dark);
-  }
   .faq-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background: var(--blue);
-    color: var(--white);
-    border-radius: 50%;
-    font-size: 14px;
-    font-weight: bold;
-    flex-shrink: 0;
+    font-size: 20px;
+    color: var(--blue);
     transition: transform .3s;
+    display: inline-flex;
   }
   .faq-item.active .faq-toggle {
     transform: rotate(180deg);
   }
   .faq-answer {
-    display: none;
-    padding: 0 20px 20px;
-    color: var(--text);
-    font-size: 14px;
-    line-height: 1.8;
-    background: var(--gray);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s, padding .3s;
+    background: transparent;
   }
   .faq-item.active .faq-answer {
-    display: block;
-    animation: slideDown .3s ease;
+    max-height: 800px;
+    padding: 0 24px 20px;
   }
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .faq-answer p {
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    font-size: 15px;
   }
   .faq-answer ul {
-    margin: 12px 0 0 20px;
-    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 12px;
   }
-  .faq-answer ul li {
+  .faq-answer li {
+    color: var(--text);
     margin-bottom: 8px;
+    font-size: 15px;
   }
   .faq-answer strong {
     color: var(--blue);
+    font-weight: 600;
   }
 
-  /* ── HELPFUL TIPS ── */
-  .tips-section {
-    background: linear-gradient(135deg, var(--amber)/10 0%, var(--green)/10 100%);
+  /* ── SEQUENCE SECTION ── */
+  .sequence-section {
+    background: var(--gray);
+    padding: 60px 5%;
+    margin: 80px 0;
     border-radius: 12px;
-    border-left: 4px solid var(--amber);
-    padding: 28px;
-    margin-top: 60px;
   }
-  .tips-section h3 {
+  .sequence-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sequence-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
     color: var(--blue);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
+    margin-bottom: 50px;
+    text-align: center;
   }
-  .tips-grid {
+  .sequence-timeline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 24px;
+    position: relative;
   }
-  .tip-card {
+  .sequence-step {
     background: var(--white);
-    padding: 16px;
+    border: 2px solid var(--border);
     border-radius: 8px;
-    border-left: 3px solid var(--amber);
-    font-size: 14px;
-    line-height: 1.6;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    transition: all .3s;
   }
-  .tip-card strong {
+  .sequence-step:hover {
+    border-color: var(--green);
+    box-shadow: 0 8px 24px rgba(46,125,50,0.1);
+  }
+  .sequence-number {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .sequence-step h3 {
     color: var(--blue);
-    display: block;
-    margin-bottom: 6px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .sequence-step p {
+    color: var(--muted);
+    font-size: 14px;
   }
 
   /* ── CTA SECTION ── */
   .cta-section {
     background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, #1a4f8a 100%);
     color: var(--white);
+    padding: 60px 5%;
+    margin-bottom: 80px;
     border-radius: 12px;
-    padding: 50px 40px;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
   .cta-section::before {
     content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 300px;
-    height: 300px;
-    background: rgba(46,125,50,0.08);
+    position: absolute; top: -40px; right: -40px;
+    width: 300px; height: 300px;
+    background: rgba(46,125,50,0.15);
     border-radius: 50%;
     pointer-events: none;
+  }
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .cta-section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    margin-bottom: 12px;
-    position: relative;
+    margin-bottom: 16px;
   }
   .cta-section p {
-    font-size: 15px;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 28px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    font-size: 16px;
+    margin-bottom: 24px;
+    opacity: 0.95;
   }
   .btn-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
     background: var(--green);
     color: var(--white);
     padding: 14px 32px;
     border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    display: inline-block;
     transition: all .2s;
-    position: relative;
   }
   .btn-cta:hover {
     background: #1b5e20;
@@ -462,32 +424,27 @@
 
   /* ── FOOTER ── */
   footer {
-    background: var(--blue-dark);
+    background: var(--text);
     color: var(--white);
-    padding: 40px 5%;
+    padding: 50px 5% 30px;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.1);
   }
   footer p {
-    font-size: 13px;
-    margin: 8px 0;
-    opacity: 0.85;
+    margin-bottom: 10px;
+    opacity: 0.8;
   }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-    nav { padding: 0 20px; }
-    .nav-links { gap: 16px; }
-    .page-header { padding: 60px 5% 40px; }
-    .page-header h1 { font-size: 2rem; }
-    section { padding: 50px 5%; }
-    .section-title { font-size: 1.6rem; }
-    .faq-question { padding: 16px; }
-    .faq-answer { padding: 0 16px 16px; }
-    .process-grid { grid-template-columns: 1fr; }
-    .tips-grid { grid-template-columns: 1fr; }
-    .comparison-table { font-size: 12px; }
-    .comparison-table th, .comparison-table td { padding: 12px; }
+    nav { padding: 0 4%; }
+    .nav-links { gap: 16px; font-size: 12px; }
+    .page-header { padding: 60px 4% 40px; }
+    .page-header h1 { font-size: 1.8rem; }
+    .section-header h2, .faq-header h2, .checklist-section h2, .sequence-section h2, .cta-section h2 { font-size: 1.6rem; }
+    .categories-grid { grid-template-columns: 1fr; gap: 16px; }
+    .faq-question { padding: 16px 16px; }
+    .faq-item.active .faq-answer { padding: 0 16px 16px; }
   }
 </style>
 </head>
@@ -496,712 +453,382 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="TG_LOGOO.png" alt="Trugydex">
+    <img src="TG_LOGOO.png" alt="Trugydex Solutions Private Limited">
   </a>
   <ul class="nav-links">
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#why">Why Us</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <a href="index.html#contact" class="nav-cta">Get Consultation</a>
 </nav>
 
 <!-- PAGE HEADER -->
-<div class="page-header">
-  <h1>Business Registration & Company Incorporation</h1>
-  <p>Complete guide to registering your business in India — from choosing a structure to filing all required documents</p>
-</div>
+<section class="page-header">
+  <div class="page-header-badge">
+    <span></span>
+    Startup & Business Registration Guide
+  </div>
+  <h1>Business Registrations in India</h1>
+  <p>Complete guidance on PAN, GST, MSME, Startup India, and all essential registrations to launch your business legally.</p>
+</section>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
-  <a href="index.html">Home</a> / <a href="index.html#services">Services</a> / Business Registration
+  <a href="index.html">Home</a> / <a href="#services">Services</a> / Business Registrations FAQs
 </div>
 
-<!-- QUICK PROCESS STEPS -->
-<section class="process-section">
-  <div class="section-inner">
-    <h2 class="section-title">Registration Process Overview</h2>
-    <div class="process-grid">
-      <div class="process-card">
-        <div class="process-number">1</div>
-        <h3>Choose Structure</h3>
-        <p>Decide between Sole Proprietorship, Partnership, Private Limited, Public Limited, LLP, or OPC</p>
+<!-- REGISTRATION CATEGORIES -->
+<section class="categories-section">
+  <div class="section-header">
+    <h2>Key Registration Categories</h2>
+    <p>Understand the essential registrations required for your business</p>
+  </div>
+  
+  <div class="categories-grid">
+    <div class="category-card" onclick="location.href='incorporation-faq.html'" style="cursor: pointer;">
+      <div class="category-icon"><i class="fas fa-building"></i></div>
+      <h3>Incorporation of Company</h3>
+      <p>Private Limited, LLP, Partnership, or Sole Proprietorship structures</p>
+      <p style="margin-top: 8px; font-size: 12px; color: var(--green); font-weight: 600;">View Detailed Guide →</p>
+    </div>
+    <div class="category-card" onclick="location.href='pan-tan-guide.html'" style="cursor: pointer;">
+      <div class="category-icon"><i class="fas fa-credit-card"></i></div>
+      <h3>PAN & TAN</h3>
+      <p>Permanent Account Number for taxation and GST purposes</p>
+      <p style="margin-top: 8px; font-size: 12px; color: var(--green); font-weight: 600;">View Detailed Guide →</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-receipt"></i></div>
+      <h3>GST Registration</h3>
+      <p>Goods & Services Tax for eligible businesses</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-rocket"></i></div>
+      <h3>MSME (Udyam)</h3>
+      <p>Access government schemes, subsidies & financing benefits</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-star"></i></div>
+      <h3>Startup India</h3>
+      <p>Tax exemptions, easier compliance & government funding</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-store"></i></div>
+      <h3>Shop & Establishment</h3>
+      <p>License from state authority for business premises</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-globe"></i></div>
+      <h3>Import-Export Code</h3>
+      <p>Required for international trade activities</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-university"></i></div>
+      <h3>Labour Compliance</h3>
+      <p>PF, ESIC, and Professional Tax registrations</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon"><i class="fas fa-trademark"></i></div>
+      <h3>Trademark & IP</h3>
+      <p>Protect your brand name, logo, and business identity</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLETE REGISTRATION CHECKLIST -->
+<section class="checklist-section">
+  <div class="checklist-inner">
+    <h2>Complete Registration Checklist</h2>
+    
+    <div class="checklist-grid">
+      <div class="checklist-group">
+        <h3>Core Registrations</h3>
+        <div class="checklist-item">Business Registration</div>
+        <div class="checklist-item">PAN & TAN</div>
+        <div class="checklist-item">Bank Account</div>
+        <div class="checklist-item">GST Registration</div>
       </div>
-      <div class="process-card">
-        <div class="process-number">2</div>
-        <h3>Reserve Name</h3>
-        <p>Check availability and reserve your business name through the RUN system or SPICe+</p>
+      
+      <div class="checklist-group">
+        <h3>Growth & Benefits</h3>
+        <div class="checklist-item">MSME (Udyam)</div>
+        <div class="checklist-item">Startup India (DPIIT)</div>
+        <div class="checklist-item">Trademark Registration</div>
+        <div class="checklist-item">Shop & Establishment</div>
       </div>
-      <div class="process-card">
-        <div class="process-number">3</div>
-        <h3>File SPICe+</h3>
-        <p>Submit the Simplified Proforma for Incorporating Company Electronically with all required documents</p>
-      </div>
-      <div class="process-card">
-        <div class="process-number">4</div>
-        <h3>Get Certificate</h3>
-        <p>Receive Certificate of Incorporation (CoI) from Registrar of Companies (ROC)</p>
-      </div>
-      <div class="process-card">
-        <div class="process-number">5</div>
-        <h3>Post-Incorporation</h3>
-        <p>File INC-20A, register for PAN, GST, MSME, and other regulatory compliances</p>
+      
+      <div class="checklist-group">
+        <h3>Industry-Specific</h3>
+        <div class="checklist-item">Import-Export Code</div>
+        <div class="checklist-item">FSSAI (Food Business)</div>
+        <div class="checklist-item">Labour Registrations</div>
+        <div class="checklist-item">Environmental Compliance</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPANY STRUCTURE COMPARISON -->
-<section class="comparison-section">
-  <div class="section-inner">
-    <h2 class="section-title">Compare Business Structures</h2>
-    <div class="table-responsive">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>Sole Proprietor</th>
-            <th>Partnership</th>
-            <th>Private Limited</th>
-            <th>OPC</th>
-            <th>LLP</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Minimum Members</strong></td>
-            <td class="type-header">1</td>
-            <td class="type-header">2</td>
-            <td class="type-header">2</td>
-            <td class="type-header">1</td>
-            <td class="type-header">2</td>
-          </tr>
-          <tr>
-            <td><strong>Liability</strong></td>
-            <td class="type-header">Unlimited</td>
-            <td class="type-header">Unlimited</td>
-            <td class="type-header">Limited</td>
-            <td class="type-header">Limited</td>
-            <td class="type-header">Limited</td>
-          </tr>
-          <tr>
-            <td><strong>Registration Cost</strong></td>
-            <td class="type-header">₹500-1000</td>
-            <td class="type-header">₹500-1000</td>
-            <td class="type-header">₹1500-5000</td>
-            <td class="type-header">₹2000-4000</td>
-            <td class="type-header">₹500-1500</td>
-          </tr>
-          <tr>
-            <td><strong>Compliance Level</strong></td>
-            <td class="type-header">Low</td>
-            <td class="type-header">Low-Medium</td>
-            <td class="type-header">High</td>
-            <td class="type-header">High</td>
-            <td class="type-header">Medium</td>
-          </tr>
-          <tr>
-            <td><strong>Tax Benefits</strong></td>
-            <td class="type-header">Limited</td>
-            <td class="type-header">Limited</td>
-            <td class="type-header">₹✓</td>
-            <td class="type-header">✓</td>
-            <td class="type-header">✓</td>
-          </tr>
-          <tr>
-            <td><strong>Loan Eligibility</strong></td>
-            <td class="type-header">Difficult</td>
-            <td class="type-header">Difficult</td>
-            <td class="type-header"><span class="check">✓ High</span></td>
-            <td class="type-header"><span class="check">✓ Medium</span></td>
-            <td class="type-header"><span class="check">✓ High</span></td>
-          </tr>
-          <tr>
-            <td><strong>Fundraising</strong></td>
-            <td class="type-header"><span class="cross">✗ No</span></td>
-            <td class="type-header"><span class="cross">✗ No</span></td>
-            <td class="type-header"><span class="check">✓ Yes</span></td>
-            <td class="type-header"><span class="cross">✗ No</span></td>
-            <td class="type-header"><span class="check">✓ Limited</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- REQUIREMENTS CHECKLIST -->
-<section class="process-section">
-  <div class="section-inner">
-    <h2 class="section-title">What You'll Need to Register</h2>
-    <div class="checklist-section">
-      <div class="checklist-grid">
-        <div class="checklist-group">
-          <h3>Personal Documents</h3>
-          <div class="checklist-item">Identity proof (Aadhaar / Passport)</div>
-          <div class="checklist-item">Address proof (Utility bill / Bank statement)</div>
-          <div class="checklist-item">PAN card copy</div>
-          <div class="checklist-item">Photograph (Digital)</div>
-        </div>
-        
-        <div class="checklist-group">
-          <h3>Business Documents</h3>
-          <div class="checklist-item">Registered office proof</div>
-          <div class="checklist-item">NOC from property owner (if rented)</div>
-          <div class="checklist-item">Lease agreement or ownership document</div>
-          <div class="checklist-item">Recent utility bill (&lt;2 months old)</div>
-        </div>
-        
-        <div class="checklist-group">
-          <h3>Director/Member Documents</h3>
-          <div class="checklist-item">DIN (Director Identification Number)</div>
-          <div class="checklist-item">Declaration of consent</div>
-          <div class="checklist-item">Declaration of non-disqualification</div>
-          <div class="checklist-item">Digital Signature Certificate (DSC)</div>
-        </div>
-        
-        <div class="checklist-group">
-          <h3>Company Documents</h3>
-          <div class="checklist-item">Memorandum of Association (MoA)</div>
-          <div class="checklist-item">Articles of Association (AoA)</div>
-          <div class="checklist-item">Professional declaration by CA/CS</div>
-          <div class="checklist-item">SPICe+ form (online filing)</div>
-        </div>
+<!-- IDEAL SEQUENCE -->
+<section class="sequence-section">
+  <div class="sequence-inner">
+    <h2>Recommended Registration Sequence</h2>
+    
+    <div class="sequence-timeline">
+      <div class="sequence-step">
+        <div class="sequence-number">1</div>
+        <h3>Business Registration</h3>
+        <p>Choose structure & register your business</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">2</div>
+        <h3>PAN & Bank Account</h3>
+        <p>Get PAN & open business account</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">3</div>
+        <h3>GST Registration</h3>
+        <p>If applicable based on turnover</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">4</div>
+        <h3>MSME Registration</h3>
+        <p>Access government benefits & schemes</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">5</div>
+        <h3>Startup India</h3>
+        <p>If eligible for startup benefits</p>
+      </div>
+      <div class="sequence-step">
+        <div class="sequence-number">6</div>
+        <h3>Trademark & IP</h3>
+        <p>Protect your brand identity</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ SECTION -->
-<section class="faq-section">
-  <div class="section-inner">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-container">
-      
-      <!-- INCORPORATION BASICS -->
-      <div class="faq-category">
-        <div class="faq-category-title">
-          <div class="faq-category-icon">📋</div>
-          Incorporation Basics
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is company incorporation and why is it necessary?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>Company incorporation is the legal process of creating a new company as a separate legal entity. When you incorporate, your business becomes a separate entity distinct from you personally. This means:</p>
-            <ul>
-              <li><strong>Limited liability:</strong> Your personal assets are protected</li>
-              <li><strong>Separate bank account:</strong> For business transactions</li>
-              <li><strong>Legal recognition:</strong> The company can own assets, sign contracts</li>
-              <li><strong>Better financing:</strong> Easier to get loans and attract investors</li>
-            </ul>
-            <p>You'll receive a Certificate of Incorporation (CoI) with a unique Corporate Identity Number (CIN) from the Registrar of Companies.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is SPICe+ and how does it simplify registration?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>SPICe+ (Simplified Proforma for Incorporating Company Electronically Plus)</strong> is India's single-window online system for company registration. It covers:</p>
-            <ul>
-              <li>Name reservation</li>
-              <li>Company incorporation</li>
-              <li>PAN assignment</li>
-              <li>TAN assignment (if needed)</li>
-              <li>GSTIN pre-registration (optional)</li>
-            </ul>
-            <p>All these are done in ONE integrated form, eliminating the need for separate applications. Processing typically takes 5-7 business days with instant digital compliance.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is a One Person Company (OPC) and who can form one?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>An OPC is a Private Limited company with only <strong>one member and one nominated successor.</strong> Key features:</p>
-            <ul>
-              <li>Only Indian citizens can form OPC (NRIs included since 2021)</li>
-              <li>A person can be a member of ONLY 1 OPC at any time</li>
-              <li>Limited liability protection</li>
-              <li>Lower compliance burden than regular Private Limited companies</li>
-              <li>Cannot carry on NBFI (investment/lending) activities</li>
-            </ul>
-            <p>OPC is ideal for solopreneurs and small business owners who want liability protection without the complexity of managing multiple members.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How long does company incorporation take?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>With SPICe+ (online filing), the typical timeline is:</p>
-            <ul>
-              <li><strong>Filing to approval:</strong> 5-7 business days</li>
-              <li><strong>Getting Certificate of Incorporation:</strong> Instant (sometimes same day)</li>
-              <li><strong>If ROC raises queries:</strong> You get 15 days to respond (up to 2 opportunities)</li>
-              <li><strong>Total in worst case:</strong> 30 days</li>
-            </ul>
-            <p>Quick tip: Prepare all documents beforehand and respond to ROC queries immediately to avoid delays.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- COMPANY NAME RULES -->
-      <div class="faq-category">
-        <div class="faq-category-title">
-          <div class="faq-category-icon">🏷️</div>
-          Company Name Rules
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How do I check if my preferred company name is available?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>You must check TWO registries:</p>
-            <ul>
-              <li><strong>MCA Registry:</strong> mca.gov.in → Check existing company names</li>
-              <li><strong>Trademark Registry:</strong> ipindia.gov.in → Check if name/logo is trademarked</li>
-            </ul>
-            <p>The ROC considers two names IDENTICAL if they differ only in:</p>
-            <ul>
-              <li>Suffixes (Limited, Ltd, Private, Pvt)</li>
-              <li>Plural forms (Solution vs Solutions)</li>
-              <li>Spacing or punctuation</li>
-              <li>Internet suffixes (.com, .in)</li>
-              <li>Phonetic similarity (Sound-alike names)</li>
-            </ul>
-            <p>Be specific with your name choice to avoid rejection.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What words are prohibited in a company name?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>The following words require special government approval before use:</p>
-            <ul>
-              <li><strong>Bank, Insurance, Stock Exchange</strong> — require RBI/IRDA/SEBI approval</li>
-              <li><strong>Venture Capital, Mutual Fund, Asset Management</strong> — regulatory approval needed</li>
-              <li><strong>State</strong> — only allowed for government companies</li>
-              <li><strong>Foreign country names</strong> — must have MOU with that country</li>
-              <li><strong>Purely generic names</strong> — e.g., "Cotton Mills Ltd"</li>
-            </ul>
-            <p>Additionally, names that are:</p>
-            <ul>
-              <li>Offensive or derogatory</li>
-              <li>Identical to registered trademarks (without owner's written consent)</li>
-              <li>Misleading about business scale/scope</li>
-            </ul>
-            <p>...will be rejected as "undesirable."</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Can I reserve my company name? For how long?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Yes, you can reserve your name for 20 days.</strong> Two options:</p>
-            <ul>
-              <li><strong>Option 1 — RUN (Reserve Unique Name):</strong> Apply separately on mca.gov.in, propose 2 names, get approval, name reserved for 20 days</li>
-              <li><strong>Option 2 — SPICe+ Part A:</strong> Do name reservation as part of SPICe+ filing</li>
-            </ul>
-            <p>If your 20-day window expires, you can extend it under Rule 9A. Keep the approval certificate safe — you'll need it when filing SPICe+ Part B.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- KEY DOCUMENTS & FILINGS -->
-      <div class="faq-category">
-        <div class="faq-category-title">
-          <div class="faq-category-icon">📄</div>
-          Key Documents & Filings
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is the Memorandum of Association (MoA) and Articles of Association (AoA)?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>MoA (Memorandum of Association):</strong></p>
-            <ul>
-              <li>Defines the company's relationship with the OUTSIDE WORLD</li>
-              <li>Contains: Name, Objects (what the company does), Registered office, Liability clause</li>
-              <li>Cannot be changed without Central Government approval (for name/objects)</li>
-            </ul>
-            <p><strong>AoA (Articles of Association):</strong></p>
-            <ul>
-              <li>Defines INTERNAL rules of the company</li>
-              <li>Contains: Member rights, Director duties, Board meetings, Dividend rules</li>
-              <li>Can be amended by Special Resolution (75% member vote)</li>
-            </ul>
-            <p>For SPICe+, both must be filed as electronic documents (e-MoA and e-AoA, Forms INC-33 and INC-34) signed digitally by all subscribers.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is INC-20A and why is it mandatory?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>INC-20A is the "Commencement of Business" form.</strong> It's mandatory for companies with share capital and must be filed:</p>
-            <ul>
-              <li><strong>Within 180 days</strong> of getting the Certificate of Incorporation</li>
-              <li><strong>After ALL members have paid</strong> for their subscribed shares</li>
-            </ul>
-            <p>Without INC-20A, your company:</p>
-            <ul>
-              <li>CANNOT start business operations</li>
-              <li>CANNOT borrow any money</li>
-              <li>May face strike-off (closure) by ROC</li>
-            </ul>
-            <p><strong>Penalties for non-compliance:</strong></p>
-            <ul>
-              <li>Company fine: ₹50,000</li>
-              <li>Per director fine: ₹1,000 per day (max ₹1,00,000)</li>
-            </ul>
-            <p>File it as soon as share capital is received in your company's bank account.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What documents do I need to prove my Registered Office address?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>The ROC requires a TWO-PART proof document:</p>
-            <ul>
-              <li><strong>Ownership/Rental proof:</strong>
-                <ul>
-                  <li>If owned: Title deed, property tax receipt, or sale deed</li>
-                  <li>If rented: Notarised lease/rent agreement + NOC from property owner</li>
-                </ul>
-              </li>
-              <li><strong>Address proof (recent):</strong> Utility bill (electricity/water/gas/telephone) NOT older than 2 months</li>
-            </ul>
-            <p>Special case — If using co-working/virtual office:</p>
-            <ul>
-              <li>Agreement with co-working space operator</li>
-              <li>NOC from the co-working space</li>
-              <li>Utility bill for that address</li>
-            </ul>
-            <p>Your registered office address must be PHYSICALLY VERIFIABLE. PO Box, email-only addresses, or unregistered locations are NOT accepted.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is a Digital Signature Certificate (DSC) and do I need one?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Yes, DSC is mandatory for SPICe+ filing.</strong></p>
-            <p>A DSC is a digital certificate that authenticates your identity online. It's like a digital ID with encryption.</p>
-            <ul>
-              <li>All directors and subscribers MUST have their own DSC</li>
-              <li>Both e-MoA (INC-33) and e-AoA (INC-34) must be digitally signed using DSC</li>
-              <li>Wet signatures on printed documents are NOT accepted</li>
-            </ul>
-            <p><strong>How to get DSC:</strong></p>
-            <ul>
-              <li>Apply to any MCA-authorized Certifying Agency</li>
-              <li>Cost: ₹500-1500 per person</li>
-              <li>Processing time: 2-3 business days</li>
-              <li>Valid for 2 years (Individuals) or 3 years (Companies)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- REGISTRATIONS & COMPLIANCE -->
-      <div class="faq-category">
-        <div class="faq-category-title">
-          <div class="faq-category-icon">✅</div>
-          Post-Incorporation Registrations
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Is PAN mandatory for my company?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Yes, PAN (Permanent Account Number) is mandatory.</strong></p>
-            <ul>
-              <li><strong>For Private Limited/OPC/LLP:</strong> Separate company PAN is required</li>
-              <li><strong>For Sole Proprietorship/Partnership:</strong> Can use owner's personal PAN</li>
-            </ul>
-            <p>Good news: If you file SPICe+, the ROC automatically assigns PAN to your company. You don't need a separate PAN application.</p>
-            <p>The PAN will be displayed in your Certificate of Incorporation.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Is GST registration compulsory?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>GST registration is <strong>required if your business exceeds certain thresholds:</strong></p>
-            <ul>
-              <li><strong>Turnover threshold:</strong> ₹40 lakhs in a financial year (for goods)</li>
-              <li><strong>Services threshold:</strong> ₹20 lakhs in a financial year</li>
-              <li><strong>Interstate trade:</strong> Any turnover amount requires GST</li>
-              <li><strong>E-commerce platform seller:</strong> Mandatory regardless of turnover</li>
-            </ul>
-            <p>Even below the threshold, GST is <strong>highly advisable</strong> because:</p>
-            <ul>
-              <li>You can claim input tax credits (recover GST paid on inputs)</li>
-              <li>Your clients expect GST-registered status</li>
-              <li>Better market credibility and compliance track record</li>
-            </ul>
-            <p>You can apply for GST along with SPICe+ through the AGILE-Pro form.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is MSME (Udyam) registration and is it necessary?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>MSME (Micro, Small, Medium Enterprise) or Udyam registration is <strong>NOT mandatory but highly beneficial.</strong></p>
-            <p><strong>Benefits of MSME registration:</strong></p>
-            <ul>
-              <li>Access to government subsidies and grants</li>
-              <li>Easier bank loans with better terms</li>
-              <li>Protection against delayed payments (45-day window)</li>
-              <li>Exemption from certain compliance requirements</li>
-              <li>Participation in government tenders</li>
-              <li>Tax benefits and incentives</li>
-            </ul>
-            <p><strong>Eligibility (2024 updated):</strong></p>
-            <ul>
-              <li><strong>Micro:</strong> Investment &lt;₹1 cr, Turnover &lt;₹5 cr</li>
-              <li><strong>Small:</strong> Investment &lt;₹10 cr, Turnover &lt;₹50 cr</li>
-              <li><strong>Medium:</strong> Investment &lt;₹50 cr, Turnover &lt;₹250 cr</li>
-            </ul>
-            <p>Registration is now done online in 10 minutes with minimal documents.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What is Startup India (DPIIT) registration?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>Startup India is a government initiative offering special benefits to innovative/tech-focused businesses.</p>
-            <p><strong>Benefits of Startup registration:</strong></p>
-            <ul>
-              <li><strong>Tax exemption:</strong> 3 years of income tax exemption</li>
-              <li><strong>Easier compliance:</strong> Reduced regulatory burden</li>
-              <li>Access to government funding and subsidies</li>
-              <li>Priority in government tenders</li>
-              <li>Mentorship and networking programs</li>
-              <li>Legal support for disputes</li>
-            </ul>
-            <p><strong>Eligibility criteria:</strong></p>
-            <ul>
-              <li>Company age: &lt;10 years from incorporation</li>
-              <li>Annual turnover: &lt;₹100 crore in preceding FY</li>
-              <li>Engaged in innovation/development of new products/services</li>
-              <li>Creates employment or adds to GDP</li>
-            </ul>
-            <p>You must get a "Startup Certificate" from Department for Promotion of Industry and Internal Trade (DPIIT) on dpiit.gov.in.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Is a Shop & Establishment License required?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Yes, most businesses require a Shop & Establishment License.</strong></p>
-            <p>Required if your business:</p>
-            <ul>
-              <li>Operates from a physical premises (office, shop, warehouse)</li>
-              <li>Employs workers/staff (even 1 employee may trigger requirement)</li>
-              <li>Operates for fixed hours and days</li>
-            </ul>
-            <p><strong>Not required for:</strong></p>
-            <ul>
-              <li>Home-based freelancers (single person operating from home)</li>
-              <li>Pure online businesses (no physical location)</li>
-              <li>Certain professional services (law, accounting, consulting)</li>
-            </ul>
-            <p><strong>How to apply:</strong></p>
-            <ul>
-              <li>Apply to the Municipal Corporation or Labor Department of your state</li>
-              <li>Application is now online in most states</li>
-              <li>Cost: ₹500-2000 depending on state</li>
-              <li>Processing: 7-30 days</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- COMMON MISTAKES -->
-      <div class="faq-category">
-        <div class="faq-category-title">
-          <div class="faq-category-icon">⚠️</div>
-          Common Mistakes to Avoid
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What are common mistakes founders make during incorporation?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>1. Choosing a narrow Objects Clause</strong></p>
-            <ul>
-              <li>❌ Wrong: "Software development only"</li>
-              <li>✅ Correct: "Software, consulting, IT services, digital marketing, training"</li>
-            </ul>
-            
-            <p><strong>2. Not filing INC-20A within 180 days</strong></p>
-            <ul>
-              <li>ROC can strike off your company after 180 days</li>
-              <li>File as soon as share capital is received</li>
-            </ul>
-            
-            <p><strong>3. Using prohibited words without approval</strong></p>
-            <ul>
-              <li>Get Central Government approval BEFORE applying for name</li>
-              <li>Don't assume your name is fine</li>
-            </ul>
-            
-            <p><strong>4. Wrong company structure choice</strong></p>
-            <ul>
-              <li>OPC can be only 1 member — not 2+</li>
-              <li>OPC cannot do lending/investment activities</li>
-            </ul>
-            
-            <p><strong>5. Not displaying CIN and company name at office</strong></p>
-            <ul>
-              <li>Rule 26 violation — ₹1,000/day fine</li>
-              <li>Must display on all letterheads, invoices, contracts</li>
-            </ul>
-            
-            <p><strong>6. Providing false information in documents</strong></p>
-            <ul>
-              <li>Criminal liability under Section 7(5) of Companies Act</li>
-              <li>Imprisonment up to 10 years possible</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Can I change my company name, objects, or registered office after incorporation?</span>
-            <span class="faq-toggle">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Name change:</strong></p>
-            <ul>
-              <li>✓ Possible by Special Resolution + Central Govt. approval</li>
-              <li>File Form INC-24, get approval, then file Form INC-27</li>
-              <li>Cost: ₹2000-5000 + government fees</li>
-              <li>Timeline: 30-60 days</li>
-            </ul>
-            
-            <p><strong>Objects change:</strong></p>
-            <ul>
-              <li>✓ Possible by Special Resolution</li>
-              <li>File Form INC-27 with ROC within 30 days of resolution</li>
-              <li>Easier than name change (no Central Govt. approval needed)</li>
-            </ul>
-            
-            <p><strong>Registered Office change (same state):</strong></p>
-            <ul>
-              <li>✓ File Form INC-22</li>
-              <li>Proof of new address required</li>
-              <li>No board resolution needed if address change only</li>
-            </ul>
-            
-            <p><strong>Registered Office change (different state):</strong></p>
-            <ul>
-              <li>✓ Possible but complex</li>
-              <li>Apply to Regional Director</li>
-              <li>Publish newspaper notice</li>
-              <li>Timeline: 60-120 days</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- HELPFUL TIPS -->
-    <div class="tips-section">
-      <h3>💡 Pro Tips for Smooth Incorporation</h3>
-      <div class="tips-grid">
-        <div class="tip-card">
-          <strong>Prepare Early</strong>
-          Gather all documents (identity, address, PAN, DSC) at least 1 week before filing to avoid last-minute delays.
-        </div>
-        <div class="tip-card">
-          <strong>Check Both Registries</strong>
-          Verify your name on both mca.gov.in AND ipindia.gov.in to avoid rejection.
-        </div>
-        <div class="tip-card">
-          <strong>File INC-20A Immediately</strong>
-          Don't wait until day 179 — file INC-20A as soon as share capital is received in your bank account.
-        </div>
-        <div class="tip-card">
-          <strong>Keep All Documents Safe</strong>
-          You'll need originals for GST, Shop License, Bank account, and various compliances.
-        </div>
-        <div class="tip-card">
-          <strong>Respond to ROC Queries Fast</strong>
-          If ROC asks for clarification, respond within 7 days to get quick approval.
-        </div>
-        <div class="tip-card">
-          <strong>Plan Registrations Ahead</strong>
-          After incorporation, start PAN assignment, GST, MSME, and Shop License applications immediately.
-        </div>
-      </div>
-    </div>
-
+<section class="faq-section" id="faq">
+  <div class="faq-header">
+    <h2>Frequently Asked Questions</h2>
+    <p>Get answers to common questions about business registrations</p>
   </div>
+
+  <div class="faq-item active">
+    <button class="faq-question">
+      <span>What is the first step to start a business in India?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>The first step is to legally register your business by selecting an appropriate structure such as a <strong>Private Limited Company, LLP, Partnership Firm, or Sole Proprietorship</strong>. This establishes your business as a legal entity recognized by the government.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is PAN mandatory for starting a business?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, Permanent Account Number (PAN) is mandatory.</strong> Companies and LLPs require a separate PAN from the company's Registrar. Proprietorships and partnerships can operate using the owner's personal PAN.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is GST registration compulsory for all businesses?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>GST registration is <strong>required if your business exceeds the prescribed turnover limits</strong>, engages in interstate trade, or operates through e-commerce platforms. It is also advisable for businesses dealing with other registered entities to maintain compliance and claim input tax credits.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is MSME (Udyam) registration and is it necessary?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>MSME registration is <strong>not mandatory but is highly beneficial.</strong> It provides access to government schemes, easier financing options, subsidies, protection against delayed payments, and various other benefits. Udyam registration is now simplified and can be done online.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is Startup India (DPIIT) registration?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Startup India registration is designed for <strong>innovative businesses</strong> and provides benefits such as:
+      <ul>
+        <li>Income tax exemptions for 3 years</li>
+        <li>Easier compliance requirements</li>
+        <li>Access to government funding schemes</li>
+        <li>Mentorship and networking opportunities</li>
+      </ul>
+      Registration is subject to eligibility criteria set by the Department for Promotion of Industry and Internal Trade (DPIIT).</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is a Shop and Establishment License required?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, most businesses are required to obtain a Shop and Establishment License</strong> from the respective state authority, especially if operating from a commercial premises. This includes offices, retail shops, warehouses, and other business locations.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is an Import Export Code (IEC)?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Import Export Code (IEC) is required for businesses involved in import or export</strong> of goods or services. Without this registration from the Directorate General of Foreign Trade (DGFT), international trade cannot be conducted. It's a unique 10-digit code.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is a business bank account necessary?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, a current account in the business name is essential</strong> for carrying out financial transactions and maintaining proper financial records. This keeps personal and business finances separate, which is crucial for:
+      <ul>
+        <li>Financial transparency</li>
+        <li>Tax compliance</li>
+        <li>Loan and credit applications</li>
+        <li>Legal compliance</li>
+      </ul></p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Are labour law registrations required?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Labour law registrations such as <strong>Provident Fund (PF), ESIC, and Professional Tax</strong> are applicable once a business employs staff, subject to prescribed thresholds. These registrations are mandatory to comply with labour laws and protect employee benefits.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Is trademark registration compulsory?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Trademark registration is <strong>not mandatory but strongly recommended</strong> to protect your:
+      <ul>
+        <li>Brand name</li>
+        <li>Logo and design</li>
+        <li>Business identity</li>
+        <li>Competitive advantage</li>
+      </ul>
+      Registration provides legal protection against misuse by competitors.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Are there any industry-specific licenses required?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Yes, certain industries require additional licenses or approvals:</strong>
+      <ul>
+        <li>Food businesses require FSSAI registration</li>
+        <li>Financial services may require RBI approvals</li>
+        <li>Healthcare businesses need specific medical board approvals</li>
+        <li>Manufacturing may need pollution control certificates</li>
+        <li>Insurance businesses need IRDAI registration</li>
+      </ul>
+      Consult industry-specific regulators for your business type.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What registrations are required for online businesses?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Online businesses require <strong>similar registrations as offline businesses</strong>, including:
+      <ul>
+        <li>Business Registration</li>
+        <li>PAN</li>
+        <li>GST (in most cases)</li>
+        <li>Bank Account</li>
+        <li>MSME (if eligible)</li>
+      </ul>
+      Additionally, ensure compliance with website policies, payment gateway terms, and consumer protection regulations.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is the minimum registration required to start a business?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>At a basic level, a business should have:</p>
+      <ul>
+        <li><strong>Business Registration</strong> (Private Ltd, LLP, Partnership, or Proprietorship)</li>
+        <li><strong>PAN</strong> (Company PAN or owner's PAN)</li>
+        <li><strong>Bank Account</strong> (Current account in business name)</li>
+        <li><strong>GST</strong> (if applicable based on turnover)</li>
+        <li><strong>MSME Registration</strong> (recommended for benefits)</li>
+      </ul>
+      These form the foundation for legal and financial compliance.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>What is the complete registration checklist for a business?</span>
+      <span class="faq-toggle">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>A comprehensive registration framework includes:</p>
+      <ul>
+        <li>Business Registration (Company/LLP/Partnership/Proprietorship)</li>
+        <li>PAN & TAN (Permanent & Tax Deduction Account Numbers)</li>
+        <li>GST Registration (if applicable)</li>
+        <li>MSME (Udyam) Registration</li>
+        <li>Startup India (DPIIT) Registration</li>
+        <li>Shop & Establishment License</li>
+        <li>Trademark Registration</li>
+        <li>Labour Law Registrations (PF, ESIC, PT)</li>
+        <li>Import Export Code (if applicable)</li>
+        <li>Industry-specific licenses (FSSAI, etc.)</li>
+      </ul></p>
+    </div>
+  </div>
+
 </section>
 
 <!-- CTA SECTION -->
-<section style="padding: 80px 5%;">
-  <div class="section-inner">
-    <div class="cta-section">
-      <h2>Ready to Start Your Business?</h2>
-      <p>Our team of chartered accountants and company secretaries will guide you through every step of incorporation, documentation, and post-registration compliance. We'll ensure your business is registered correctly and fully compliant from day one.</p>
-      <a href="index.html#contact" class="btn-cta">Schedule Consultation →</a>
-    </div>
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Need Professional Guidance?</h2>
+    <p>Our compliance experts at Trugydex Solutions can guide you through every registration step and ensure your business is fully compliant with all regulatory requirements.</p>
+    <a href="index.html#contact" class="btn-cta">Get Expert Consultation</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2025 Trugydex Solutions Private Limited. All rights reserved.</p>
-  <p>Sahi Salah Suchan — Business Registration & Compliance Experts</p>
-  <p><a href="index.html" style="color: inherit; text-decoration: none;">Back to Home</a></p>
+  <p>&copy; 2024 Trugydex Solutions Private Limited. All rights reserved.</p>
+  <p>Sahi Salah Suchan — Compliance & Regulatory Expertise</p>
 </footer>
 
 <!-- JAVASCRIPT FOR ACCORDION -->
@@ -1219,18 +846,8 @@
       // Open clicked item if it wasn't active
       if (!isActive) {
         faqItem.classList.add('active');
-        // Smooth scroll to item
-        setTimeout(() => {
-          faqItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
       }
     });
-  });
-
-  // Smooth nav active state
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,48,135,0.12)' : '0 2px 12px rgba(0,48,135,0.07)';
   });
 </script>
 
