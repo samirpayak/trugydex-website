@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Company Incorporation FAQs | Trugydex Solutions</title>
-<meta name="description" content="Comprehensive FAQs on company incorporation under Companies Act 2013 & Incorporation Rules 2014. Learn about SPICe+, OPC, name reservation, MoA/AoA, and more.">
-<link rel="canonical" href="https://trugydex.in/incorporation-faq.html">
+<title>Business Registration & Company Incorporation | Trugydex Solutions</title>
+<meta name="description" content="Complete guide to business registration and company incorporation in India. Learn about PAN, GST, MSME, Startup India, incorporation rules, and more.">
+<link rel="canonical" href="https://trugydex.in/business-registration.html">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -102,8 +102,57 @@
   section { padding: 80px 5%; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
 
-  /* ── FAQ ACCORDION ── */
-  .faq-section {
+  /* ── QUICK PROCESS STEPS ── */
+  .process-section {
+    background: var(--gray);
+  }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .process-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    transition: all .3s ease;
+    position: relative;
+  }
+  .process-card:hover {
+    border-color: var(--blue);
+    box-shadow: 0 12px 32px rgba(0,48,135,0.12);
+    transform: translateY(-4px);
+  }
+  .process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .process-card h3 {
+    color: var(--blue);
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .process-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── COMPARISON TABLE ── */
+  .comparison-section {
     background: var(--white);
   }
   .section-title {
@@ -112,6 +161,99 @@
     color: var(--blue);
     margin-bottom: 40px;
     text-align: center;
+  }
+  .table-responsive {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--white);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .comparison-table thead {
+    background: var(--blue);
+    color: var(--white);
+  }
+  .comparison-table th {
+    padding: 18px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .comparison-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .comparison-table tbody tr:hover {
+    background: var(--gray-dark);
+  }
+  .comparison-table .type-header {
+    font-weight: 600;
+    color: var(--blue);
+  }
+  .check { color: var(--green); font-weight: 600; }
+  .cross { color: var(--red); font-weight: 600; }
+
+  /* ── REQUIREMENTS CHECKLIST ── */
+  .checklist-section {
+    background: var(--blue-light);
+    border-radius: 12px;
+  }
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+  .checklist-group {
+    background: var(--white);
+    padding: 24px;
+    border-radius: 10px;
+    border-left: 4px solid var(--green);
+  }
+  .checklist-group h3 {
+    color: var(--green);
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .checklist-group h3::before {
+    content: '✓';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  .checklist-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .checklist-item::before {
+    content: '→';
+    color: var(--green);
+    font-weight: bold;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+
+  /* ── FAQ ACCORDION ── */
+  .faq-section {
+    background: var(--white);
   }
   .faq-category {
     margin-bottom: 50px;
@@ -218,11 +360,11 @@
       transform: translateY(0);
     }
   }
-  .faq-answer ul, .faq-answer ol {
+  .faq-answer ul {
     margin: 12px 0 0 20px;
     padding: 0;
   }
-  .faq-answer ul li, .faq-answer ol li {
+  .faq-answer ul li {
     margin-bottom: 8px;
   }
   .faq-answer strong {
@@ -307,557 +449,736 @@
     background: var(--green);
     color: var(--white);
     padding: 14px 32px;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 15px;
-    transition: background .3s;
+    transition: all .2s;
     position: relative;
   }
   .btn-cta:hover {
     background: #1b5e20;
+    transform: translateY(-2px);
   }
 
   /* ── FOOTER ── */
   footer {
-    background: var(--blue);
+    background: var(--blue-dark);
     color: var(--white);
     padding: 40px 5%;
     text-align: center;
-    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
-  footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
+  footer p {
+    font-size: 13px;
+    margin: 8px 0;
+    opacity: 0.85;
+  }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-    nav { flex-direction: column; gap: 12px; padding: 12px 5%; height: auto; }
-    .nav-links { flex-direction: column; gap: 12px; width: 100%; }
-    .page-header { padding: 40px 5%; }
-    .page-header h1 { font-size: 1.8rem; }
-    .faq-question { font-size: 14px; padding: 16px; }
-    section { padding: 40px 5%; }
+    nav { padding: 0 20px; }
+    .nav-links { gap: 16px; }
+    .page-header { padding: 60px 5% 40px; }
+    .page-header h1 { font-size: 2rem; }
+    section { padding: 50px 5%; }
+    .section-title { font-size: 1.6rem; }
+    .faq-question { padding: 16px; }
+    .faq-answer { padding: 0 16px 16px; }
+    .process-grid { grid-template-columns: 1fr; }
+    .tips-grid { grid-template-columns: 1fr; }
+    .comparison-table { font-size: 12px; }
+    .comparison-table th, .comparison-table td { padding: 12px; }
   }
 </style>
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <i class="fas fa-check-circle" style="color: var(--blue); font-size: 24px;"></i>
-    <span style="color: var(--blue); font-weight: 700; font-size: 16px;">TRUGYDEX</span>
+    <img src="TG_LOGOO.png" alt="Trugydex">
   </a>
   <ul class="nav-links">
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#why-us">Why Us</a></li>
-    <li><a href="registrations-faq.html">FAQs</a></li>
     <li><a href="index.html#contact">Contact</a></li>
-    <li><a href="index.html#contact" class="nav-cta">Get Consultation</a></li>
   </ul>
+  <a href="index.html#contact" class="nav-cta">Get Consultation</a>
 </nav>
 
-<!-- Page Header -->
+<!-- PAGE HEADER -->
 <div class="page-header">
-  <h1>Company Incorporation</h1>
-  <p>Comprehensive FAQs on Companies Act 2013 & Incorporation Rules 2014 — Everything you need to know about incorporating your company in India</p>
+  <h1>Business Registration & Company Incorporation</h1>
+  <p>Complete guide to registering your business in India — from choosing a structure to filing all required documents</p>
 </div>
 
-<!-- Breadcrumb -->
+<!-- BREADCRUMB -->
 <div class="breadcrumb">
-  <a href="index.html">Home</a> / <a href="registrations-faq.html">Services</a> / Company Incorporation FAQs
+  <a href="index.html">Home</a> / <a href="index.html#services">Services</a> / Business Registration
 </div>
 
-<!-- Main Content -->
+<!-- QUICK PROCESS STEPS -->
+<section class="process-section">
+  <div class="section-inner">
+    <h2 class="section-title">Registration Process Overview</h2>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-number">1</div>
+        <h3>Choose Structure</h3>
+        <p>Decide between Sole Proprietorship, Partnership, Private Limited, Public Limited, LLP, or OPC</p>
+      </div>
+      <div class="process-card">
+        <div class="process-number">2</div>
+        <h3>Reserve Name</h3>
+        <p>Check availability and reserve your business name through the RUN system or SPICe+</p>
+      </div>
+      <div class="process-card">
+        <div class="process-number">3</div>
+        <h3>File SPICe+</h3>
+        <p>Submit the Simplified Proforma for Incorporating Company Electronically with all required documents</p>
+      </div>
+      <div class="process-card">
+        <div class="process-number">4</div>
+        <h3>Get Certificate</h3>
+        <p>Receive Certificate of Incorporation (CoI) from Registrar of Companies (ROC)</p>
+      </div>
+      <div class="process-card">
+        <div class="process-number">5</div>
+        <h3>Post-Incorporation</h3>
+        <p>File INC-20A, register for PAN, GST, MSME, and other regulatory compliances</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY STRUCTURE COMPARISON -->
+<section class="comparison-section">
+  <div class="section-inner">
+    <h2 class="section-title">Compare Business Structures</h2>
+    <div class="table-responsive">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Sole Proprietor</th>
+            <th>Partnership</th>
+            <th>Private Limited</th>
+            <th>OPC</th>
+            <th>LLP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Minimum Members</strong></td>
+            <td class="type-header">1</td>
+            <td class="type-header">2</td>
+            <td class="type-header">2</td>
+            <td class="type-header">1</td>
+            <td class="type-header">2</td>
+          </tr>
+          <tr>
+            <td><strong>Liability</strong></td>
+            <td class="type-header">Unlimited</td>
+            <td class="type-header">Unlimited</td>
+            <td class="type-header">Limited</td>
+            <td class="type-header">Limited</td>
+            <td class="type-header">Limited</td>
+          </tr>
+          <tr>
+            <td><strong>Registration Cost</strong></td>
+            <td class="type-header">₹500-1000</td>
+            <td class="type-header">₹500-1000</td>
+            <td class="type-header">₹1500-5000</td>
+            <td class="type-header">₹2000-4000</td>
+            <td class="type-header">₹500-1500</td>
+          </tr>
+          <tr>
+            <td><strong>Compliance Level</strong></td>
+            <td class="type-header">Low</td>
+            <td class="type-header">Low-Medium</td>
+            <td class="type-header">High</td>
+            <td class="type-header">High</td>
+            <td class="type-header">Medium</td>
+          </tr>
+          <tr>
+            <td><strong>Tax Benefits</strong></td>
+            <td class="type-header">Limited</td>
+            <td class="type-header">Limited</td>
+            <td class="type-header">₹✓</td>
+            <td class="type-header">✓</td>
+            <td class="type-header">✓</td>
+          </tr>
+          <tr>
+            <td><strong>Loan Eligibility</strong></td>
+            <td class="type-header">Difficult</td>
+            <td class="type-header">Difficult</td>
+            <td class="type-header"><span class="check">✓ High</span></td>
+            <td class="type-header"><span class="check">✓ Medium</span></td>
+            <td class="type-header"><span class="check">✓ High</span></td>
+          </tr>
+          <tr>
+            <td><strong>Fundraising</strong></td>
+            <td class="type-header"><span class="cross">✗ No</span></td>
+            <td class="type-header"><span class="cross">✗ No</span></td>
+            <td class="type-header"><span class="check">✓ Yes</span></td>
+            <td class="type-header"><span class="cross">✗ No</span></td>
+            <td class="type-header"><span class="check">✓ Limited</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS CHECKLIST -->
+<section class="process-section">
+  <div class="section-inner">
+    <h2 class="section-title">What You'll Need to Register</h2>
+    <div class="checklist-section">
+      <div class="checklist-grid">
+        <div class="checklist-group">
+          <h3>Personal Documents</h3>
+          <div class="checklist-item">Identity proof (Aadhaar / Passport)</div>
+          <div class="checklist-item">Address proof (Utility bill / Bank statement)</div>
+          <div class="checklist-item">PAN card copy</div>
+          <div class="checklist-item">Photograph (Digital)</div>
+        </div>
+        
+        <div class="checklist-group">
+          <h3>Business Documents</h3>
+          <div class="checklist-item">Registered office proof</div>
+          <div class="checklist-item">NOC from property owner (if rented)</div>
+          <div class="checklist-item">Lease agreement or ownership document</div>
+          <div class="checklist-item">Recent utility bill (&lt;2 months old)</div>
+        </div>
+        
+        <div class="checklist-group">
+          <h3>Director/Member Documents</h3>
+          <div class="checklist-item">DIN (Director Identification Number)</div>
+          <div class="checklist-item">Declaration of consent</div>
+          <div class="checklist-item">Declaration of non-disqualification</div>
+          <div class="checklist-item">Digital Signature Certificate (DSC)</div>
+        </div>
+        
+        <div class="checklist-group">
+          <h3>Company Documents</h3>
+          <div class="checklist-item">Memorandum of Association (MoA)</div>
+          <div class="checklist-item">Articles of Association (AoA)</div>
+          <div class="checklist-item">Professional declaration by CA/CS</div>
+          <div class="checklist-item">SPICe+ form (online filing)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
 <section class="faq-section">
   <div class="section-inner">
     <h2 class="section-title">Frequently Asked Questions</h2>
-
-    <!-- PART A: Incorporation Rules -->
-    <div class="faq-category">
-      <div class="faq-category-title">
-        <div class="faq-category-icon"><i class="fas fa-book"></i></div>
-        <span>Incorporation Rules & Their Importance</span>
-      </div>
-      <div class="faq-container">
+    <div class="faq-container">
+      
+      <!-- INCORPORATION BASICS -->
+      <div class="faq-category">
+        <div class="faq-category-title">
+          <div class="faq-category-icon">📋</div>
+          Incorporation Basics
+        </div>
+        
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: What exactly are the Companies (Incorporation) Rules, 2014?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>What is company incorporation and why is it necessary?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>The Companies Act, 2013 sets the broad legal framework. But it doesn't specify every procedural detail. To fill this gap, the Central Government notified the <strong>Companies (Incorporation) Rules, 2014</strong> (effective 1 April 2014, last amended 2024).</p>
-            <p style="margin-top: 12px;"><strong>These Rules tell you exactly:</strong></p>
+            <p>Company incorporation is the legal process of creating a new company as a separate legal entity. When you incorporate, your business becomes a separate entity distinct from you personally. This means:</p>
             <ul>
-              <li>Which form to file</li>
-              <li>What documents to attach</li>
-              <li>What timelines to follow</li>
-              <li>What fees to pay — for every step from name reservation to Certificate of Incorporation</li>
+              <li><strong>Limited liability:</strong> Your personal assets are protected</li>
+              <li><strong>Separate bank account:</strong> For business transactions</li>
+              <li><strong>Legal recognition:</strong> The company can own assets, sign contracts</li>
+              <li><strong>Better financing:</strong> Easier to get loans and attract investors</li>
             </ul>
+            <p>You'll receive a Certificate of Incorporation (CoI) with a unique Corporate Identity Number (CIN) from the Registrar of Companies.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: How often are the Incorporation Rules amended?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>What is SPICe+ and how does it simplify registration?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>The Rules are amended frequently. <strong>Major amendments:</strong> 2015, 2016 (SPICe introduced), 2018, 2019, 2020 (SPICe+ launched), 2021 (OPC reforms), 2023 (INC-4 simplification), 2024.</p>
-            <p style="margin-top: 12px;"><strong>Always refer to the latest version on:</strong> mca.gov.in → Acts & Rules → E-Books → Rules</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PART B: Types of Companies -->
-    <div class="faq-category">
-      <div class="faq-category-title">
-        <div class="faq-category-icon"><i class="fas fa-layer-group"></i></div>
-        <span>Types of Companies & OPC Rules</span>
-      </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: Who can form an OPC? What changed in 2021?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p>Under <strong>Rule 3</strong>, only a natural person who is an Indian citizen can form an OPC. <strong>Key 2021 update:</strong> The earlier requirement of residing in India for 182 days was changed to 120 days AND the residency condition itself was made optional — meaning NRIs and Indian citizens abroad can now form an OPC.</p>
+            <p><strong>SPICe+ (Simplified Proforma for Incorporating Company Electronically Plus)</strong> is India's single-window online system for company registration. It covers:</p>
             <ul>
-              <li>Must be a natural person (not a company/LLP)</li>
-              <li>Must be an Indian citizen — foreign nationals CANNOT form an OPC</li>
-              <li>Cannot be a minor</li>
+              <li>Name reservation</li>
+              <li>Company incorporation</li>
+              <li>PAN assignment</li>
+              <li>TAN assignment (if needed)</li>
+              <li>GSTIN pre-registration (optional)</li>
+            </ul>
+            <p>All these are done in ONE integrated form, eliminating the need for separate applications. Processing typically takes 5-7 business days with instant digital compliance.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is a One Person Company (OPC) and who can form one?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>An OPC is a Private Limited company with only <strong>one member and one nominated successor.</strong> Key features:</p>
+            <ul>
+              <li>Only Indian citizens can form OPC (NRIs included since 2021)</li>
               <li>A person can be a member of ONLY 1 OPC at any time</li>
-              <li>An OPC CANNOT be converted into a Section 8 company</li>
-              <li>An OPC CANNOT carry on NBFI activities</li>
+              <li>Limited liability protection</li>
+              <li>Lower compliance burden than regular Private Limited companies</li>
+              <li>Cannot carry on NBFI (investment/lending) activities</li>
             </ul>
+            <p>OPC is ideal for solopreneurs and small business owners who want liability protection without the complexity of managing multiple members.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: What is the Nominee appointment process for an OPC?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>How long does company incorporation take?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Under <strong>Rule 4</strong> (as amended in 2023):</p>
+            <p>With SPICe+ (online filing), the typical timeline is:</p>
             <ul>
-              <li>Get WRITTEN CONSENT from the proposed nominee before incorporation</li>
-              <li>Mention the nominee's name in the e-MoA</li>
-              <li>File the nominee's consent as a DECLARATION within SPICe+</li>
+              <li><strong>Filing to approval:</strong> 5-7 business days</li>
+              <li><strong>Getting Certificate of Incorporation:</strong> Instant (sometimes same day)</li>
+              <li><strong>If ROC raises queries:</strong> You get 15 days to respond (up to 2 opportunities)</li>
+              <li><strong>Total in worst case:</strong> 30 days</li>
             </ul>
-            <p style="margin-top: 12px;"><strong>Change of nominee:</strong> Any time by the member — filed via Form INC-4 within 30 days of change.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: When and how does an OPC convert to a Private or Public Company?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p>Under <strong>Rule 6</strong> (as amended in 2021): The old mandatory conversion thresholds were REMOVED. Now conversion is VOLUNTARY and can happen at any time:</p>
-            <ul>
-              <li>Alter e-MoA and e-AoA by passing a resolution</li>
-              <li>Increase members to minimum 2 (Private) or 7 (Public)</li>
-              <li>Maintain minimum paid-up capital for that class</li>
-              <li>File e-Form INC-6 with altered e-MoA and e-AoA</li>
-              <li>ROC examines latest audited financials → issues new Certificate</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: When are members personally liable for company debts?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p>Under <strong>Section 3A</strong>, if the NUMBER OF MEMBERS falls BELOW the legal minimum AND the company carries on business for MORE THAN 6 MONTHS in that state — the remaining members are PERSONALLY LIABLE for ALL debts:</p>
-            <ul>
-              <li><strong>Private Company:</strong> minimum is 2 members — if below 2 for 6+ months → personal liability</li>
-              <li><strong>Public Company:</strong> minimum is 7 members — if below 7 for 6+ months → personal liability</li>
-            </ul>
+            <p>Quick tip: Prepare all documents beforehand and respond to ROC queries immediately to avoid delays.</p>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- PART C: Company Name Rules -->
-    <div class="faq-category">
-      <div class="faq-category-title">
-        <div class="faq-category-icon"><i class="fas fa-heading"></i></div>
-        <span>Company Name Rules</span>
-      </div>
-      <div class="faq-container">
+      <!-- COMPANY NAME RULES -->
+      <div class="faq-category">
+        <div class="faq-category-title">
+          <div class="faq-category-icon">🏷️</div>
+          Company Name Rules
+        </div>
+
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: What differences in a name are IGNORED when checking if two names are 'identical'?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>How do I check if my preferred company name is available?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Under <strong>Rule 8(1)</strong>, the ROC considers two names as IDENTICAL and will REJECT the new name if the only differences are:</p>
+            <p>You must check TWO registries:</p>
             <ul>
-              <li>Suffix words: 'Private', 'Pvt', 'Limited', 'Ltd', 'LLP'</li>
-              <li>Plural form of any word (e.g., 'Solution' vs 'Solutions')</li>
-              <li>Spacing, punctuation marks, or type/case of letters</li>
-              <li>Joining/separating words (e.g., 'InfoTech' vs 'Info Tech')</li>
-              <li>Phonetic/spelling variations</li>
-              <li>Internet suffixes (.com, .net, .org, .in)</li>
-              <li>Prefixes: 'New', 'Modern', 'Nav', 'Shri', 'Sri', 'Om', 'Jai', 'Sai', 'The'</li>
+              <li><strong>MCA Registry:</strong> mca.gov.in → Check existing company names</li>
+              <li><strong>Trademark Registry:</strong> ipindia.gov.in → Check if name/logo is trademarked</li>
             </ul>
+            <p>The ROC considers two names IDENTICAL if they differ only in:</p>
+            <ul>
+              <li>Suffixes (Limited, Ltd, Private, Pvt)</li>
+              <li>Plural forms (Solution vs Solutions)</li>
+              <li>Spacing or punctuation</li>
+              <li>Internet suffixes (.com, .in)</li>
+              <li>Phonetic similarity (Sound-alike names)</li>
+            </ul>
+            <p>Be specific with your name choice to avoid rejection.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: What words are PROHIBITED in a company name?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>What words are prohibited in a company name?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Under <strong>Rule 8B</strong>, the following words CANNOT be used without prior Central Government approval:</p>
+            <p>The following words require special government approval before use:</p>
             <ul>
-              <li>Insurance, Bank, Stock Exchange, Venture Capital</li>
-              <li>Asset Management, Nidhi, Mutual Fund</li>
-              <li>'State' — allowed ONLY for Government companies</li>
-              <li>Name of any continent/country/state/city alone</li>
-              <li>Purely generic/descriptive names</li>
+              <li><strong>Bank, Insurance, Stock Exchange</strong> — require RBI/IRDA/SEBI approval</li>
+              <li><strong>Venture Capital, Mutual Fund, Asset Management</strong> — regulatory approval needed</li>
+              <li><strong>State</strong> — only allowed for government companies</li>
+              <li><strong>Foreign country names</strong> — must have MOU with that country</li>
+              <li><strong>Purely generic names</strong> — e.g., "Cotton Mills Ltd"</li>
             </ul>
+            <p>Additionally, names that are:</p>
+            <ul>
+              <li>Offensive or derogatory</li>
+              <li>Identical to registered trademarks (without owner's written consent)</li>
+              <li>Misleading about business scale/scope</li>
+            </ul>
+            <p>...will be rejected as "undesirable."</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: When is a name 'Undesirable' under Rule 8(2)?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>Can I reserve my company name? For how long?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>A name is undesirable if:</p>
+            <p><strong>Yes, you can reserve your name for 20 days.</strong> Two options:</p>
             <ul>
-              <li>It violates the Emblems and Names (Prevention of Improper Use) Act, 1950</li>
-              <li>It includes a registered trademark — UNLESS owner gives written consent</li>
-              <li>It is offensive to any section of people</li>
-              <li>It is identical to or too similar to an existing LLP name</li>
-              <li>It gives a misleading impression about scale/scope of business</li>
-              <li>It includes the name of a foreign country — without proof of MOU</li>
+              <li><strong>Option 1 — RUN (Reserve Unique Name):</strong> Apply separately on mca.gov.in, propose 2 names, get approval, name reserved for 20 days</li>
+              <li><strong>Option 2 — SPICe+ Part A:</strong> Do name reservation as part of SPICe+ filing</li>
             </ul>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: How do I reserve my company name? What are the two options?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p>Under <strong>Rule 9</strong>, you have two options:</p>
-            <p><strong>Option 1 — RUN (Reserve Unique Name) — file separately first:</strong></p>
-            <ul>
-              <li>Apply via RUN web service on mca.gov.in</li>
-              <li>Propose up to 2 names with reasons</li>
-              <li>Pay the prescribed fee</li>
-              <li>If approved — name reserved for 20 days</li>
-            </ul>
-            <p style="margin-top: 12px;"><strong>Option 2 — SPICe+ Part A — name reservation + incorporation together:</strong></p>
-            <ul>
-              <li>If filing Part A separately — propose up to 2 names</li>
-              <li>If filing Parts A & B together — only 1 name required</li>
-            </ul>
+            <p>If your 20-day window expires, you can extend it under Rule 9A. Keep the approval certificate safe — you'll need it when filing SPICe+ Part B.</p>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- PART D: MoA & AoA -->
-    <div class="faq-category">
-      <div class="faq-category-title">
-        <div class="faq-category-icon"><i class="fas fa-file-contract"></i></div>
-        <span>Drafting MoA & AoA</span>
-      </div>
-      <div class="faq-container">
+      <!-- KEY DOCUMENTS & FILINGS -->
+      <div class="faq-category">
+        <div class="faq-category-title">
+          <div class="faq-category-icon">📄</div>
+          Key Documents & Filings
+        </div>
+
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: What is 'Entrenchment' in the AoA?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>What is the Memorandum of Association (MoA) and Articles of Association (AoA)?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Under <strong>Rule 10 / Section 5(3)–(5)</strong>, 'Entrenchment provisions' are AoA clauses that make certain provisions HARDER to amend than the usual Special Resolution (75% vote) threshold.</p>
+            <p><strong>MoA (Memorandum of Association):</strong></p>
             <ul>
-              <li>Can be included in the ORIGINAL AoA at incorporation, OR added later</li>
-              <li>If added AFTER in a PRIVATE company — requires unanimous agreement of ALL members</li>
-              <li>For a PUBLIC company — requires a Special Resolution to add entrenchment</li>
-              <li>The company MUST notify the ROC of entrenchment provisions in SPICe+</li>
+              <li>Defines the company's relationship with the OUTSIDE WORLD</li>
+              <li>Contains: Name, Objects (what the company does), Registered office, Liability clause</li>
+              <li>Cannot be changed without Central Government approval (for name/objects)</li>
             </ul>
+            <p><strong>AoA (Articles of Association):</strong></p>
+            <ul>
+              <li>Defines INTERNAL rules of the company</li>
+              <li>Contains: Member rights, Director duties, Board meetings, Dividend rules</li>
+              <li>Can be amended by Special Resolution (75% member vote)</li>
+            </ul>
+            <p>For SPICe+, both must be filed as electronic documents (e-MoA and e-AoA, Forms INC-33 and INC-34) signed digitally by all subscribers.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: Must I always prepare an e-MoA (INC-33) and e-AoA (INC-34)?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>What is INC-20A and why is it mandatory?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Under <strong>Rule 13 / Rule 38</strong>, for all companies incorporated through SPICe+, ELECTRONIC MoA and AoA are mandatory:</p>
+            <p><strong>INC-20A is the "Commencement of Business" form.</strong> It's mandatory for companies with share capital and must be filed:</p>
             <ul>
-              <li><strong>e-MoA = Form INC-33</strong> (filed online as part of SPICe+)</li>
-              <li><strong>e-AoA = Form INC-34</strong> (filed online as part of SPICe+)</li>
-              <li>Both must be DIGITALLY SIGNED by ALL subscribers using their DSCs</li>
-              <li>Physical/wet signatures are NOT accepted for SPICe+ filers</li>
-              <li>Subscribers' photographs are NOT required in SPICe+ forms</li>
+              <li><strong>Within 180 days</strong> of getting the Certificate of Incorporation</li>
+              <li><strong>After ALL members have paid</strong> for their subscribed shares</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PART E: Incorporation Process -->
-    <div class="faq-category">
-      <div class="faq-category-title">
-        <div class="faq-category-icon"><i class="fas fa-rocket"></i></div>
-        <span>The Incorporation Process — SPICe+ & Timelines</span>
-      </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: What is SPICe+ and what services does it cover?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>SPICe+</strong> (Simplified Proforma for Incorporating Company Electronically Plus — Form INC-32), introduced under Rule 38 in February 2020, is a two-part integrated form:</p>
+            <p>Without INC-20A, your company:</p>
             <ul>
-              <li><strong>Part A:</strong> Company name reservation</li>
-              <li><strong>Part B:</strong> Full incorporation filing with all documents</li>
+              <li>CANNOT start business operations</li>
+              <li>CANNOT borrow any money</li>
+              <li>May face strike-off (closure) by ROC</li>
             </ul>
-            <p style="margin-top: 12px;">SPICe+ is India's Single-Window Company Registration System that allows you to apply for Company Incorporation, DSC, DIN, PAN, TAN, Telephone, Mobile, Email, and Bank Account Registration all in ONE form.</p>
+            <p><strong>Penalties for non-compliance:</strong></p>
+            <ul>
+              <li>Company fine: ₹50,000</li>
+              <li>Per director fine: ₹1,000 per day (max ₹1,00,000)</li>
+            </ul>
+            <p>File it as soon as share capital is received in your company's bank account.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: What is the complete step-by-step process to file SPICe+?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>What documents do I need to prove my Registered Office address?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <ol>
-              <li>Obtain DSC (Digital Signature Certificate) for each proposed director</li>
-              <li>If directors don't have DIN — apply for new DINs within SPICe+</li>
-              <li>Login to MCA21 portal (mca.gov.in)</li>
-              <li>Open SPICe+ — file Part A for name (separately or with Part B)</li>
-              <li>Fill Part B — company type, capital, registered office, director details</li>
-              <li>Prepare e-MoA (INC-33) and e-AoA (INC-34) — digitally signed</li>
-              <li>Fill AGILE-Pro (INC-35) — GSTIN, EPFO, ESIC, bank account details</li>
-              <li>Attach all mandatory documents</li>
-              <li>Generate challan and pay all applicable fees online</li>
-              <li>Submit and respond to any ROC queries — up to 2 resubmissions allowed</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: What documents are required for SPICe+?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p>Mandatory documents under Rules 12 & 16:</p>
+            <p>The ROC requires a TWO-PART proof document:</p>
             <ul>
-              <li>e-MoA (Form INC-33) — digitally signed by all subscribers</li>
-              <li>e-AoA (Form INC-34) — digitally signed by all subscribers</li>
-              <li>Declaration by CA/CS/CWA/Advocate in Form INC-8</li>
-              <li>INC-9 — Affidavit by each subscriber and first director</li>
-              <li>Registered office proof: Utility bill + ownership document OR notarised rent agreement</li>
-              <li>NOC from property owner if premises is rented</li>
-              <li>DIR-2 — Consent of each director</li>
-              <li>DIR-8 — Declaration that directors are not disqualified</li>
-              <li>PAN card copies of all subscribers/directors</li>
-              <li>Identity proof (Aadhaar / Passport / Voter ID)</li>
-              <li>Address proof of all subscribers/directors</li>
+              <li><strong>Ownership/Rental proof:</strong>
+                <ul>
+                  <li>If owned: Title deed, property tax receipt, or sale deed</li>
+                  <li>If rented: Notarised lease/rent agreement + NOC from property owner</li>
+                </ul>
+              </li>
+              <li><strong>Address proof (recent):</strong> Utility bill (electricity/water/gas/telephone) NOT older than 2 months</li>
             </ul>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: What is INC-20A (Commencement of Business)? Why is it critical?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p>Under <strong>Section 10A read with Rule 23A</strong>, every company WITH SHARE CAPITAL cannot start business or borrow money until:</p>
-            <ul>
-              <li>ALL subscribers pay up the full value of their shares</li>
-              <li>A declaration in Form INC-20A is filed with the ROC</li>
-              <li>This MUST be done within <strong>180 days</strong> of Certificate of Incorporation date</li>
-            </ul>
-            <p style="margin-top: 12px;"><strong>Consequences of non-compliance:</strong></p>
-            <ul>
-              <li>Company CANNOT start business operations</li>
-              <li>Company CANNOT borrow any money</li>
-              <li>ROC may initiate STRIKE OFF (close) the company</li>
-              <li>Penalty on company: ₹50,000</li>
-              <li>Penalty on each director: ₹1,000 per day (maximum ₹1,00,000)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PART F: Registered Office -->
-    <div class="faq-category">
-      <div class="faq-category-title">
-        <div class="faq-category-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <span>Registered Office Setup & Requirements</span>
-      </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Q: What documents are accepted as registered office proof?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>If OWNED by the director/subscriber:</strong></p>
-            <ul>
-              <li>Utility bill (electricity/gas/telephone) NOT older than 2 months</li>
-              <li>PLUS: Ownership document (property tax receipt / title deed)</li>
-            </ul>
-            <p style="margin-top: 12px;"><strong>If RENTED:</strong></p>
-            <ul>
-              <li>Utility bill not older than 2 months</li>
-              <li>PLUS: Notarised Rent Agreement OR Lease Agreement</li>
-              <li>PLUS: NOC from property owner</li>
-            </ul>
-            <p style="margin-top: 12px;"><strong>If CO-WORKING SPACE / VIRTUAL OFFICE:</strong></p>
+            <p>Special case — If using co-working/virtual office:</p>
             <ul>
               <li>Agreement with co-working space operator</li>
-              <li>NOC from co-working space</li>
+              <li>NOC from the co-working space</li>
               <li>Utility bill for that address</li>
             </ul>
+            <p>Your registered office address must be PHYSICALLY VERIFIABLE. PO Box, email-only addresses, or unregistered locations are NOT accepted.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Q: What must be displayed at the Registered Office and on all documents?</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            <span>What is a Digital Signature Certificate (DSC) and do I need one?</span>
+            <span class="faq-toggle">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Under <strong>Rule 26</strong>, every company must PROMINENTLY display at its registered office:</p>
+            <p><strong>Yes, DSC is mandatory for SPICe+ filing.</strong></p>
+            <p>A DSC is a digital certificate that authenticates your identity online. It's like a digital ID with encryption.</p>
             <ul>
-              <li>Full company name</li>
-              <li>Address of the registered office</li>
-              <li>Corporate Identity Number (CIN)</li>
-              <li>Telephone number, email address, and website (if any)</li>
+              <li>All directors and subscribers MUST have their own DSC</li>
+              <li>Both e-MoA (INC-33) and e-AoA (INC-34) must be digitally signed using DSC</li>
+              <li>Wet signatures on printed documents are NOT accepted</li>
             </ul>
-            <p style="margin-top: 12px;">On <strong>ALL business correspondence</strong> (letterheads, notices, bills, invoices, cheques, receipts, contracts):</p>
+            <p><strong>How to get DSC:</strong></p>
             <ul>
-              <li>Company name</li>
-              <li>Registered office address</li>
-              <li>CIN</li>
-              <li>Telephone, email, website (if any)</li>
+              <li>Apply to any MCA-authorized Certifying Agency</li>
+              <li>Cost: ₹500-1500 per person</li>
+              <li>Processing time: 2-3 business days</li>
+              <li>Valid for 2 years (Individuals) or 3 years (Companies)</li>
             </ul>
           </div>
         </div>
       </div>
+
+      <!-- REGISTRATIONS & COMPLIANCE -->
+      <div class="faq-category">
+        <div class="faq-category-title">
+          <div class="faq-category-icon">✅</div>
+          Post-Incorporation Registrations
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is PAN mandatory for my company?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Yes, PAN (Permanent Account Number) is mandatory.</strong></p>
+            <ul>
+              <li><strong>For Private Limited/OPC/LLP:</strong> Separate company PAN is required</li>
+              <li><strong>For Sole Proprietorship/Partnership:</strong> Can use owner's personal PAN</li>
+            </ul>
+            <p>Good news: If you file SPICe+, the ROC automatically assigns PAN to your company. You don't need a separate PAN application.</p>
+            <p>The PAN will be displayed in your Certificate of Incorporation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is GST registration compulsory?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>GST registration is <strong>required if your business exceeds certain thresholds:</strong></p>
+            <ul>
+              <li><strong>Turnover threshold:</strong> ₹40 lakhs in a financial year (for goods)</li>
+              <li><strong>Services threshold:</strong> ₹20 lakhs in a financial year</li>
+              <li><strong>Interstate trade:</strong> Any turnover amount requires GST</li>
+              <li><strong>E-commerce platform seller:</strong> Mandatory regardless of turnover</li>
+            </ul>
+            <p>Even below the threshold, GST is <strong>highly advisable</strong> because:</p>
+            <ul>
+              <li>You can claim input tax credits (recover GST paid on inputs)</li>
+              <li>Your clients expect GST-registered status</li>
+              <li>Better market credibility and compliance track record</li>
+            </ul>
+            <p>You can apply for GST along with SPICe+ through the AGILE-Pro form.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is MSME (Udyam) registration and is it necessary?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>MSME (Micro, Small, Medium Enterprise) or Udyam registration is <strong>NOT mandatory but highly beneficial.</strong></p>
+            <p><strong>Benefits of MSME registration:</strong></p>
+            <ul>
+              <li>Access to government subsidies and grants</li>
+              <li>Easier bank loans with better terms</li>
+              <li>Protection against delayed payments (45-day window)</li>
+              <li>Exemption from certain compliance requirements</li>
+              <li>Participation in government tenders</li>
+              <li>Tax benefits and incentives</li>
+            </ul>
+            <p><strong>Eligibility (2024 updated):</strong></p>
+            <ul>
+              <li><strong>Micro:</strong> Investment &lt;₹1 cr, Turnover &lt;₹5 cr</li>
+              <li><strong>Small:</strong> Investment &lt;₹10 cr, Turnover &lt;₹50 cr</li>
+              <li><strong>Medium:</strong> Investment &lt;₹50 cr, Turnover &lt;₹250 cr</li>
+            </ul>
+            <p>Registration is now done online in 10 minutes with minimal documents.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is Startup India (DPIIT) registration?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Startup India is a government initiative offering special benefits to innovative/tech-focused businesses.</p>
+            <p><strong>Benefits of Startup registration:</strong></p>
+            <ul>
+              <li><strong>Tax exemption:</strong> 3 years of income tax exemption</li>
+              <li><strong>Easier compliance:</strong> Reduced regulatory burden</li>
+              <li>Access to government funding and subsidies</li>
+              <li>Priority in government tenders</li>
+              <li>Mentorship and networking programs</li>
+              <li>Legal support for disputes</li>
+            </ul>
+            <p><strong>Eligibility criteria:</strong></p>
+            <ul>
+              <li>Company age: &lt;10 years from incorporation</li>
+              <li>Annual turnover: &lt;₹100 crore in preceding FY</li>
+              <li>Engaged in innovation/development of new products/services</li>
+              <li>Creates employment or adds to GDP</li>
+            </ul>
+            <p>You must get a "Startup Certificate" from Department for Promotion of Industry and Internal Trade (DPIIT) on dpiit.gov.in.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is a Shop & Establishment License required?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Yes, most businesses require a Shop & Establishment License.</strong></p>
+            <p>Required if your business:</p>
+            <ul>
+              <li>Operates from a physical premises (office, shop, warehouse)</li>
+              <li>Employs workers/staff (even 1 employee may trigger requirement)</li>
+              <li>Operates for fixed hours and days</li>
+            </ul>
+            <p><strong>Not required for:</strong></p>
+            <ul>
+              <li>Home-based freelancers (single person operating from home)</li>
+              <li>Pure online businesses (no physical location)</li>
+              <li>Certain professional services (law, accounting, consulting)</li>
+            </ul>
+            <p><strong>How to apply:</strong></p>
+            <ul>
+              <li>Apply to the Municipal Corporation or Labor Department of your state</li>
+              <li>Application is now online in most states</li>
+              <li>Cost: ₹500-2000 depending on state</li>
+              <li>Processing: 7-30 days</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMON MISTAKES -->
+      <div class="faq-category">
+        <div class="faq-category-title">
+          <div class="faq-category-icon">⚠️</div>
+          Common Mistakes to Avoid
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are common mistakes founders make during incorporation?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>1. Choosing a narrow Objects Clause</strong></p>
+            <ul>
+              <li>❌ Wrong: "Software development only"</li>
+              <li>✅ Correct: "Software, consulting, IT services, digital marketing, training"</li>
+            </ul>
+            
+            <p><strong>2. Not filing INC-20A within 180 days</strong></p>
+            <ul>
+              <li>ROC can strike off your company after 180 days</li>
+              <li>File as soon as share capital is received</li>
+            </ul>
+            
+            <p><strong>3. Using prohibited words without approval</strong></p>
+            <ul>
+              <li>Get Central Government approval BEFORE applying for name</li>
+              <li>Don't assume your name is fine</li>
+            </ul>
+            
+            <p><strong>4. Wrong company structure choice</strong></p>
+            <ul>
+              <li>OPC can be only 1 member — not 2+</li>
+              <li>OPC cannot do lending/investment activities</li>
+            </ul>
+            
+            <p><strong>5. Not displaying CIN and company name at office</strong></p>
+            <ul>
+              <li>Rule 26 violation — ₹1,000/day fine</li>
+              <li>Must display on all letterheads, invoices, contracts</li>
+            </ul>
+            
+            <p><strong>6. Providing false information in documents</strong></p>
+            <ul>
+              <li>Criminal liability under Section 7(5) of Companies Act</li>
+              <li>Imprisonment up to 10 years possible</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I change my company name, objects, or registered office after incorporation?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Name change:</strong></p>
+            <ul>
+              <li>✓ Possible by Special Resolution + Central Govt. approval</li>
+              <li>File Form INC-24, get approval, then file Form INC-27</li>
+              <li>Cost: ₹2000-5000 + government fees</li>
+              <li>Timeline: 30-60 days</li>
+            </ul>
+            
+            <p><strong>Objects change:</strong></p>
+            <ul>
+              <li>✓ Possible by Special Resolution</li>
+              <li>File Form INC-27 with ROC within 30 days of resolution</li>
+              <li>Easier than name change (no Central Govt. approval needed)</li>
+            </ul>
+            
+            <p><strong>Registered Office change (same state):</strong></p>
+            <ul>
+              <li>✓ File Form INC-22</li>
+              <li>Proof of new address required</li>
+              <li>No board resolution needed if address change only</li>
+            </ul>
+            
+            <p><strong>Registered Office change (different state):</strong></p>
+            <ul>
+              <li>✓ Possible but complex</li>
+              <li>Apply to Regional Director</li>
+              <li>Publish newspaper notice</li>
+              <li>Timeline: 60-120 days</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Common Mistakes -->
-    <div class="faq-category">
-      <div class="faq-category-title">
-        <div class="faq-category-icon"><i class="fas fa-exclamation-triangle"></i></div>
-        <span>Common Mistakes Founders Must Avoid</span>
-      </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>❌ Choosing a name without checking trademark registry</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>✅ Correct Approach:</strong> Search BOTH mca.gov.in (company name) AND ipindia.gov.in (trademark) before finalising any name</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>❌ Writing a narrow Objects Clause that doesn't cover future plans</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>✅ Correct Approach:</strong> Write broad objects to cover current business PLUS future areas (tech/AI/consulting/hardware etc.)</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>❌ Not filing INC-20A within 180 days of Certificate of Incorporation</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>✅ Correct Approach:</strong> File INC-20A as soon as share capital is received in bank — don't wait for day 179</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>❌ OPC formed by a foreign national</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>✅ Correct Approach:</strong> Only Indian citizens can form an OPC — NRIs qualify, but foreign nationals do NOT</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>❌ Not establishing Registered Office within 30 days of CoI</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>✅ Correct Approach:</strong> Arrange address before incorporating — file INC-22 within 30 days of CoI date</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>❌ Providing false information in incorporation forms</span>
-            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>⚖️ Legal Consequence:</strong> Criminal liability — Section 7(5)/(6) — imprisonment up to 10 years.</p>
-            <p style="margin-top: 12px;"><strong>✅ Correct Approach:</strong> Always submit accurate documents</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Helpful Tips -->
+    <!-- HELPFUL TIPS -->
     <div class="tips-section">
-      <h3><i class="fas fa-lightbulb"></i> Helpful Tips for Smooth Incorporation</h3>
+      <h3>💡 Pro Tips for Smooth Incorporation</h3>
       <div class="tips-grid">
         <div class="tip-card">
-          <strong>Start Early</strong>
-          Begin the incorporation process at least 2-3 weeks before you plan to start operations. It gives you buffer time for document verification and ROC queries.
+          <strong>Prepare Early</strong>
+          Gather all documents (identity, address, PAN, DSC) at least 1 week before filing to avoid last-minute delays.
         </div>
         <div class="tip-card">
-          <strong>Verify Documents</strong>
-          Double-check all documents for accuracy before uploading. A small mistake can delay your incorporation by weeks.
-        </div>
-        <div class="tip-card">
-          <strong>Use Authorized Service Providers</strong>
-          If you're not familiar with the process, hire a qualified Company Secretary (CS) or CA. The investment is worth the saved time and hassle.
+          <strong>Check Both Registries</strong>
+          Verify your name on both mca.gov.in AND ipindia.gov.in to avoid rejection.
         </div>
         <div class="tip-card">
           <strong>File INC-20A Immediately</strong>
-          Don't wait until day 179. File the Commencement of Business form as soon as you receive share capital in the company's bank account.
+          Don't wait until day 179 — file INC-20A as soon as share capital is received in your bank account.
         </div>
         <div class="tip-card">
-          <strong>Registered Office Setup</strong>
-          Arrange your registered office address BEFORE filing SPICe+. This prevents delays in obtaining the Certificate of Incorporation.
+          <strong>Keep All Documents Safe</strong>
+          You'll need originals for GST, Shop License, Bank account, and various compliances.
         </div>
         <div class="tip-card">
-          <strong>Monitor ROC Portal</strong>
-          Check the MCA21 portal regularly for any ROC queries or notices. Respond quickly to avoid rejection.
+          <strong>Respond to ROC Queries Fast</strong>
+          If ROC asks for clarification, respond within 7 days to get quick approval.
+        </div>
+        <div class="tip-card">
+          <strong>Plan Registrations Ahead</strong>
+          After incorporation, start PAN assignment, GST, MSME, and Shop License applications immediately.
         </div>
       </div>
     </div>
@@ -865,46 +1186,51 @@
   </div>
 </section>
 
-<!-- CTA Section -->
-<section>
+<!-- CTA SECTION -->
+<section style="padding: 80px 5%;">
   <div class="section-inner">
     <div class="cta-section">
-      <h2>Ready to Incorporate Your Company?</h2>
-      <p>Our expert team at Trugydex Solutions will guide you through every step of the incorporation process with complete compliance and efficiency. We handle all the paperwork so you can focus on building your business.</p>
-      <a href="index.html#contact" class="btn-cta">
-        <i class="fas fa-calendar-alt"></i>
-        Schedule Free Consultation
-      </a>
+      <h2>Ready to Start Your Business?</h2>
+      <p>Our team of chartered accountants and company secretaries will guide you through every step of incorporation, documentation, and post-registration compliance. We'll ensure your business is registered correctly and fully compliant from day one.</p>
+      <a href="index.html#contact" class="btn-cta">Schedule Consultation →</a>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
-  <p>&copy; 2024 Trugydex Solutions Private Limited. All rights reserved.</p>
-  <p>Sahi Salah Suchan | SEBI Compliance & Company Incorporation Consultancy</p>
-  <p style="margin-top: 16px;">Email: <a href="mailto:info@trugydex.in">info@trugydex.in</a> | Phone: <a href="tel:+918460042325">+91 8460042325</a></p>
-  <p style="margin-top: 16px; font-size: 12px; opacity: 0.8;">⚖️ Disclaimer: This is educational content. Always verify the latest rules at mca.gov.in. For legal advice, consult a qualified Company Secretary (CS) or Chartered Accountant (CA).</p>
+  <p>&copy; 2025 Trugydex Solutions Private Limited. All rights reserved.</p>
+  <p>Sahi Salah Suchan — Business Registration & Compliance Experts</p>
+  <p><a href="index.html" style="color: inherit; text-decoration: none;">Back to Home</a></p>
 </footer>
 
+<!-- JAVASCRIPT FOR ACCORDION -->
 <script>
-  // Accordion functionality
-  const faqItems = document.querySelectorAll('.faq-item');
-  
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    
-    question.addEventListener('click', () => {
-      // Close all other items
-      faqItems.forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.classList.remove('active');
-        }
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', function() {
+      const faqItem = this.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all open items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
       });
       
-      // Toggle current item
-      item.classList.toggle('active');
+      // Open clicked item if it wasn't active
+      if (!isActive) {
+        faqItem.classList.add('active');
+        // Smooth scroll to item
+        setTimeout(() => {
+          faqItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
     });
+  });
+
+  // Smooth nav active state
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,48,135,0.12)' : '0 2px 12px rgba(0,48,135,0.07)';
   });
 </script>
 
