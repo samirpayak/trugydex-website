@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEBI Licensing & Registration | Stock Broker, RA, IA, DP, PMS, AIF | Trugydex Solutions</title>
+<meta name="description" content="Complete SEBI licensing and registration guidance for Stock Brokers, Research Analysts, Investment Advisors, Depository Participants, PMS and AIF managers. Expert compliance support.">
+<link rel="canonical" href="https://trugydex.in/licensing-registration.html">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --blue: #003087;
+    --blue-dark: #001f5b;
+    --blue-light: #e8eef8;
+    --green: #2E7D32;
+    --green-light: #e8f5e9;
+    --white: #ffffff;
+    --gray: #f5f6fa;
+    --text: #1a1a2e;
+    --muted: #5a6072;
+    --border: #dde3f0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(0,48,135,0.07);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { height: 48px; width: auto; object-fit: contain; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta {
+    background: var(--blue); color: var(--white); padding: 10px 22px;
+    border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;
+    transition: background .2s; display: flex; align-items: center; gap: 6px;
+  }
+  .nav-cta:hover { background: var(--blue-dark); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    margin-top: 70px;
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, #1a4f8a 100%);
+    color: var(--white);
+    padding: 80px 5% 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    background: rgba(46,125,50,0.12);
+    border-radius: 50%;
+  }
+  .page-header-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(46,125,50,0.2); border: 1px solid rgba(46,125,50,0.4);
+    color: #81c784; padding: 6px 14px; border-radius: 20px;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .page-header p {
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* ── SECTIONS ── */
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 80px 5%; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-tag {
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green); font-weight: 600;
+    display: inline-block; margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: 2.2rem;
+    color: var(--blue); margin-bottom: 16px; line-height: 1.3;
+  }
+  .section-sub { font-size: 15px; color: var(--muted); max-width: 700px; margin: 0 auto; }
+
+  /* ── REGISTRATION CARDS GRID ── */
+  .registrations { background: var(--white); }
+  .registration-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .registration-card {
+    background: var(--white); border: 2px solid var(--border);
+    border-radius: 14px; padding: 40px 30px; transition: all .3s;
+    text-align: center; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    min-height: 350px;
+  }
+  .registration-card:hover {
+    box-shadow: 0 16px 50px rgba(0,48,135,0.15);
+    transform: translateY(-8px);
+    border-color: var(--green);
+    background: var(--blue-light);
+  }
+  .registration-icon {
+    font-size: 50px; margin-bottom: 20px; display: block;
+  }
+  .registration-card h3 {
+    font-size: 18px; font-weight: 600; color: var(--blue);
+    margin-bottom: 12px; line-height: 1.4;
+  }
+  .registration-card p {
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 24px; flex-grow: 1;
+  }
+  .registration-link {
+    background: var(--green); color: var(--white);
+    padding: 12px 24px; border-radius: 6px; text-decoration: none;
+    font-size: 14px; font-weight: 500; transition: all .2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .registration-link:hover {
+    background: #1b5e20; transform: translateY(-2px);
+  }
+
+  /* ── COMPARISON TABLE ── */
+  .comparison { background: var(--gray); }
+  .comparison-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border-radius: 10px; overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,48,135,0.08);
+  }
+  .comparison-table thead {
+    background: var(--blue); color: var(--white);
+  }
+  .comparison-table th {
+    padding: 18px 16px; text-align: left; font-weight: 600; font-size: 14px;
+  }
+  .comparison-table td {
+    padding: 16px; border-bottom: 1px solid var(--border); font-size: 13px;
+  }
+  .comparison-table tr:hover { background: var(--blue-light); }
+  .registration-type { font-weight: 600; color: var(--blue); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--blue-dark); color: rgba(255,255,255,0.75);
+    padding: 50px 5% 24px;
+  }
+  .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-col h4 { font-size: 13px; font-weight: 600; color: var(--white); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: #81c784; }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.45); }
+
+  /* ── CTA SECTION ── */
+  .cta-section { text-align: center; padding: 60px 0; background: var(--white); }
+  .btn-primary {
+    background: var(--green); color: var(--white);
+    padding: 13px 28px; border-radius: 6px; text-decoration: none;
+    font-size: 15px; font-weight: 500; transition: all .2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: #1b5e20; transform: translateY(-2px); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .registration-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .page-header h1 { font-size: 2rem; }
+  }
+  @media (max-width: 600px) {
+    .registration-grid { grid-template-columns: 1fr; }
+    .comparison-table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="TG_LOGOO.png" alt="Trugydex Solutions">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#why">Why Us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta"><i class="fas fa-phone"></i> Get Consultation</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-badge"><span></span>SEBI Intermediaries</div>
+  <h1>SEBI Licensing & Registration</h1>
+  <p>Complete guide to all SEBI intermediary registration types including eligibility, compliance requirements, and regulatory procedures</p>
+</section>
+
+<!-- ALL REGISTRATION TYPES -->
+<section class="registrations">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">REGISTRATION TYPES</div>
+      <h2 class="section-title">6 SEBI Registration Categories</h2>
+      <p class="section-sub">Explore each registration type with comprehensive guidance on requirements, process, and compliance obligations</p>
+    </div>
+
+    <div class="registration-grid">
+      <!-- Stock Broker -->
+      <div class="registration-card">
+        <span class="registration-icon">📈</span>
+        <h3>Stock Broker Registration</h3>
+        <p>Register as a stock broker to facilitate buying/selling of securities on stock exchanges. Includes capital adequacy requirements and compliance standards.</p>
+        <a href="stock-broker-registration.html" class="registration-link">
+          <i class="fas fa-arrow-right"></i> Learn More
+        </a>
+      </div>
+
+      <!-- Research Analyst -->
+      <div class="registration-card">
+        <span class="registration-icon">📊</span>
+        <h3>Research Analyst Registration</h3>
+        <p>Register as a research analyst to provide research services and market recommendations. Covers compliance, conflict management, and audit requirements.</p>
+        <a href="research-analyst-registration.html" class="registration-link">
+          <i class="fas fa-arrow-right"></i> Learn More
+        </a>
+      </div>
+
+      <!-- Investment Advisor -->
+      <div class="registration-card">
+        <span class="registration-icon">💼</span>
+        <h3>Investment Advisor Registration</h3>
+        <p>Register as an investment advisor to provide personalized investment advice. Includes fiduciary obligations and client agreement requirements.</p>
+        <a href="investment-advisor-registration.html" class="registration-link">
+          <i class="fas fa-arrow-right"></i> Learn More
+        </a>
+      </div>
+
+      <!-- Depository Participant -->
+      <div class="registration-card">
+        <span class="registration-icon">🏦</span>
+        <h3>Depository Participant Registration</h3>
+        <p>Register as a depository participant to facilitate dematerialization of securities. Covers CDSL/NSDL operations and depository regulations.</p>
+        <a href="depository-participant-registration.html" class="registration-link">
+          <i class="fas fa-arrow-right"></i> Learn More
+        </a>
+      </div>
+
+      <!-- Portfolio Management Services -->
+      <div class="registration-card">
+        <span class="registration-icon">📋</span>
+        <h3>Portfolio Management Services</h3>
+        <p>Register to provide portfolio management services to clients. Includes discretionary management and separate account management guidance.</p>
+        <a href="portfolio-management-services-registration.html" class="registration-link">
+          <i class="fas fa-arrow-right"></i> Learn More
+        </a>
+      </div>
+
+      <!-- Alternative Investment Fund -->
+      <div class="registration-card">
+        <span class="registration-icon">💰</span>
+        <h3>Alternative Investment Fund Manager</h3>
+        <p>Register as an AIF manager to manage alternative investment funds. Covers Category I, II, and III AIFs with specific regulatory requirements.</p>
+        <a href="alternative-investment-fund-registration.html" class="registration-link">
+          <i class="fas fa-arrow-right"></i> Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="comparison">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">QUICK COMPARISON</div>
+      <h2 class="section-title">Registration Requirements Comparison</h2>
+      <p class="section-sub">Quick reference guide for eligibility criteria and key requirements across all SEBI registration types</p>
+    </div>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Registration Type</th>
+          <th>Primary Activity</th>
+          <th>Min. Capital/Net Worth</th>
+          <th>Key Compliance Focus</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="registration-type">Stock Broker</td>
+          <td>Securities trading on exchange</td>
+          <td>₹1 Cr (NSE/BSE Cash)</td>
+          <td>Client protection, KYC, AML</td>
+          <td>Perpetual (annual renewal)</td>
+        </tr>
+        <tr>
+          <td class="registration-type">Research Analyst</td>
+          <td>Research and recommendations</td>
+          <td>Deposit (varies by type)</td>
+          <td>Conflict management, independence</td>
+          <td>Perpetual (annual renewal)</td>
+        </tr>
+        <tr>
+          <td class="registration-type">Investment Advisor</td>
+          <td>Personalized investment advice</td>
+          <td>₹50 Lakhs (body corporate)</td>
+          <td>Fiduciary duty, client agreements</td>
+          <td>5 years (renewal required)</td>
+        </tr>
+        <tr>
+          <td class="registration-type">Depository Participant</td>
+          <td>Dematerialization services</td>
+          <td>₹50 Lakhs (minimum)</td>
+          <td>Custody, operational compliance</td>
+          <td>5 years (renewal required)</td>
+        </tr>
+        <tr>
+          <td class="registration-type">Portfolio Manager</td>
+          <td>Discretionary portfolio management</td>
+          <td>₹1 Cr (net worth)</td>
+          <td>Segregation of assets, disclosure</td>
+          <td>5 years (renewal required)</td>
+        </tr>
+        <tr>
+          <td class="registration-type">AIF Manager</td>
+          <td>Alternative fund management</td>
+          <td>₹1 Cr (Category I/II/III)</td>
+          <td>Fund governance, investor protection</td>
+          <td>5 years (renewal required)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="section-inner">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--blue); margin-bottom: 20px;">Need Expert Guidance on SEBI Registration?</h2>
+    <p style="font-size: 16px; color: var(--muted); margin-bottom: 30px;">Select a registration type above to explore complete requirements and procedures. Trugydex provides end-to-end support for all SEBI registrations.</p>
+    <a href="index.html#contact" class="btn-primary"><i class="fas fa-phone"></i> Get Expert Consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="TG_LOGOO.png" alt="Trugydex" style="height: 40px; width: auto; margin-bottom: 12px;">
+      <p>Expert SEBI compliance consultancy specializing in all intermediary registrations, licensing procedures, and ongoing regulatory compliance management</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why">Why Us</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="registrations-faq.html">Business Registrations</a>
+      <a href="incorporation-faq.html">Company Incorporation</a>
+      <a href="pan-tan-guide.html">PAN & TAN Guide</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <a href="tel:+918460042325">+91 8460042325</a>
+      <a href="tel:+918000073534">+91 80000 73534</a>
+      <a href="/cdn-cgi/l/email-protection#a7cec9c1c8e7d3d5d2c0dec3c2df89cec9"><span class="__cf_email__" data-cfemail="1b72757d745b6f696e7c627f7e63357275">[email&#160;protected]</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Trugydex Solutions Private Li
